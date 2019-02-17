@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 * {
   font-family: 'Montserrat', sans-serif;
+  color: #423b3b;
+}
+
+p {
+  line-height: 20px;
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   display: block;
   margin: 0 auto;
   padding: 0 15px 0 15px;
@@ -48,4 +53,19 @@ img {
 
 .bio h1 {
   margin-top: 0
+}
+
+.title {
+  font-weight: bold;
+}
+
+@media all and (max-device-width: 480px) {
+  .bio {
+    flex-direction: column;
+  }
+
+  img {
+    margin-left: 0;
+    margin-top: 15px;
+  }
 }
