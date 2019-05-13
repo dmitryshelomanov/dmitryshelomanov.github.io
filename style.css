@@ -8,6 +8,9 @@
 
 p {
   line-height: 20px;
+}
+
+.bio > p {
   text-decoration: underline;
 }
 
