@@ -64,6 +64,10 @@ img {
   font-weight: bold;
 }
 
+.projects a:not(:last-child) {
+  margin-right: 15px;
+}
+
 @media all and (max-device-width: 480px) {
   .bio {
     flex-direction: column;
