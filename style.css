@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+:root {
+  --paragraph-line-height: 25px;
+  --primary-color: #19212b;
+  --secondary-color: #03A9F4;
+  --bg-color: #fff;
+}
+
+html, body {
+  background-color: var(--bg-color);
+}
+
 * {
   font-family: 'Montserrat', sans-serif;
-  color: #423b3b;
+  color: var(--primary-color);
   box-sizing: border-box;
 }
 
 p {
-  line-height: 20px;
+  line-height: var(--paragraph-line-height);
 }
 
 .bio p {
@@ -23,7 +34,7 @@ p {
 }
 
 a {
-  color: #03A9F4;
+  color: var(--secondary-color);
   font-weight: 700;
 }
 
@@ -81,5 +92,12 @@ img {
 
   .container {
     padding: 5px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #19212b;
+    --primary-color: #fff;
   }
 }
