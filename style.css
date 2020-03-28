@@ -88,10 +88,12 @@ img {
   img {
     margin-left: 0;
     margin-top: 15px;
+    border-radius: 0;
+    width: 100%;
   }
 
   .container {
-    padding: 5px;
+    padding: 5px 16px;
   }
 }
 
