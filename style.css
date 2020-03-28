@@ -17,7 +17,7 @@ html, body {
   box-sizing: border-box;
 }
 
-p {
+p, .expirience li {
   line-height: var(--paragraph-line-height);
 }
 
