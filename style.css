@@ -65,16 +65,21 @@ li {
 img {
   width: 280px;
   height: auto;
-  margin-left: 100px;
   border-radius: 8px;
 }
 
 .bio {
   padding-top: 15px;
+  margin-bottom: 25px;
+  display: flex;
 }
 
 .bio h1 {
   margin-top: 0;
+}
+
+.bio div.position {
+  margin-left: 25px;
 }
 
 .title {
@@ -84,6 +89,21 @@ img {
 .projects a:not(:last-child) {
   margin-right: 15px;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1
+}
+
+.col.production {
+  flex: 1;
+  margin-right: 35px;
+}
+
 
 @media all and (max-device-width: 480px) {
   .bio {
@@ -103,23 +123,12 @@ img {
   }
 }
 
-/* snowbal css */
-.sf-snow-flake {
-  position: fixed;
-  top: -20px;
-  z-index: 99999;
-}
-.sf-snow-anim {
-  top: 110%;
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-color: #19212b;
-    --primary-color: #fff;
+@media all and (max-device-width: 975px) {
+  .row {
+    flex-direction: column;
   }
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
