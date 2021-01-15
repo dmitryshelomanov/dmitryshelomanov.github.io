@@ -111,9 +111,12 @@ img {
     align-items: center;
   }
 
-  img {
+  .bio div.position {
     margin-left: 0;
-    margin-top: 15px;
+  }
+
+  img {
+    margin: 5px 0px 15px 0px;
     border-radius: 0;
     width: 100%;
   }
