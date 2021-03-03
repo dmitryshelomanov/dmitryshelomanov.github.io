@@ -2,9 +2,9 @@
 
 :root {
   --paragraph-line-height: 25px;
-  --primary-color: #19212b;
   --secondary-color: #03a9f4;
-  --bg-color: #fff;
+  --bg-color: #19212b;
+  --primary-color: #fff;
 }
 
 html,
@@ -12,10 +12,21 @@ body {
   background-color: var(--bg-color);
 }
 
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+body,canvas {
+  background-color: var(--bg-color) !important;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
   color: var(--primary-color);
   box-sizing: border-box;
+  font-weight: bold;
 }
 
 p,
@@ -33,6 +44,8 @@ p,
   display: block;
   margin: 0 auto;
   padding: 0 15px 0 15px;
+  z-index: 2;
+  position: absolute;
 }
 
 a {
@@ -60,6 +73,23 @@ li {
 
 .expirience {
   margin-bottom: 30px;
+  border-left: 1px solid var(--secondary-color);
+  padding-left: 15px;
+  position: relative;
+}
+
+.expirience::before {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  content: " "
 }
 
 img {
@@ -104,6 +134,10 @@ img {
   margin-right: 35px;
 }
 
+canvas {
+  position: fixed;
+  z-index: 0;
+}
 
 @media all and (max-device-width: 480px) {
   .bio {
@@ -124,18 +158,19 @@ img {
   .container {
     padding: 5px 16px;
   }
+
+  .expirience {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .expirience::before {
+    display: none;
+  }
 }
 
 @media all and (max-device-width: 975px) {
   .row {
     flex-direction: column;
-  }
-}
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #19212b;
-    --primary-color: #fff;
   }
 }
