@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import IframeResizer from "iframe-resizer-react";
 import { DefaultSidebar } from "../../features/common/sidebar";
