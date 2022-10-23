@@ -18,6 +18,9 @@ export function DefaultSidebar() {
       <Menu.Item icon={<CaretRightOutlined />} key="/game-of-live">
         <Link to="/game-of-live">Game of live classic</Link>
       </Menu.Item>
+      <Menu.Item icon={<CaretRightOutlined />} key="/player">
+        <Link to="/player">Музыкальный плеер</Link>
+      </Menu.Item>
 
       <Menu.ItemGroup title="Демки из Hub" />
       <Menu.Item icon={<CaretRightOutlined />} key="/game-of-live-v2">
