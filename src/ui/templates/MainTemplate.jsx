@@ -52,7 +52,7 @@ const ContentWrapper = styled(Layout)`
   z-index: 10;
   transition: all 0.2s;
   background: transparent;
-  min-height: 100vh;
+  min-height: 100%;
 
   @media (min-width: 1024px) {
     padding-left: 50px;
@@ -101,7 +101,7 @@ export function MainTemplate({ sidebar, children, noPadding }) {
 
   return (
     <Layout
-      style={{ minHeight: "100vh", backgroundColor: "transparent" }}
+      style={{ minHeight: "100%", backgroundColor: "transparent" }}
       hasSider
     >
       <CommonSider
