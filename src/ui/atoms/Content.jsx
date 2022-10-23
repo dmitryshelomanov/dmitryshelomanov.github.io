@@ -6,8 +6,7 @@ export const Content = styled(Layout.Content)`
   flex-direction: column;
   background: #fff;
   margin: 5px;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: auto;
   min-width: 320px;
   z-index: 2;
   box-sizing: border-box;
