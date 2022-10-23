@@ -10,13 +10,20 @@ export function GuessPage() {
     <MainTemplate sidebar={<DefaultSidebar />}>
       <Typography.Title>Guess</Typography.Title>
 
-      <Alert
-        message="Правила"
-        description={`
+      <Space direction="vertical">
+        <Alert
+          message="Правила"
+          description={`
           Нужно угадать больше или меньше следующая карта чем предыдущее.
           (Туз меньше двойки, но больше остальных)
         `}
-      />
+        />
+
+        {guess.failed && <Alert type="error" message="Проиграли" showIcon />}
+        {guess.winner && !guess.failed && (
+          <Alert type="success" message="Победа !" showIcon />
+        )}
+      </Space>
 
       <Content jc="center" ai="center">
         <Row>
@@ -44,11 +51,6 @@ export function GuessPage() {
           </Col>
         </Space>
       </Content>
-
-      {guess.failed && <Alert type="error" message="Проиграли" showIcon />}
-      {guess.winner && !guess.failed && (
-        <Alert type="success" message="Победа !" showIcon />
-      )}
     </MainTemplate>
   );
 }
