@@ -13,7 +13,7 @@ const Frame = styled(IframeResizer)`
 export function FromGithubPage({ url }) {
   return (
     <MainTemplate sidebar={<DefaultSidebar />} noPadding>
-      <Frame src={url} />
+      <Frame src={url} scrolling />
     </MainTemplate>
   );
 }
