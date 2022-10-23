@@ -26,6 +26,12 @@ const fromGithub = [
       <FromGithubPage url="https://dmitryshelomanov.github.io/reason-game-of-life/" />
     ),
   },
+  {
+    path: "/player",
+    page: (
+      <FromGithubPage url="https://dmitryshelomanov.github.io/music-player/" />
+    ),
+  },
 ];
 
 export const routes = (
