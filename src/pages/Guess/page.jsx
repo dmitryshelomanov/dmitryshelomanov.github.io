@@ -10,6 +10,14 @@ export function GuessPage() {
     <MainTemplate sidebar={<DefaultSidebar />}>
       <Typography.Title>Guess</Typography.Title>
 
+      <Alert
+        message="Правила"
+        description={`
+          Нужно угадать больше или меньше следующая карта чем предыдущее.
+          (Туз меньше двойки, но больше остальных)
+        `}
+      />
+
       <Content jc="center" ai="center">
         <Row>
           <Typography.Text>Еще карт: {rest}</Typography.Text>

@@ -4,7 +4,7 @@ import { useGameOfLive2, gameSettings } from "../../features/tasks/gameOfLive2";
 import { MainTemplate } from "../../ui";
 
 export function GameOfLive2Page() {
-  const { board, iter } = useGameOfLive2();
+  const { board, iter, season } = useGameOfLive2();
 
   return (
     <MainTemplate sidebar={<DefaultSidebar />}>
@@ -17,6 +17,8 @@ export function GameOfLive2Page() {
       />
       <Typography.Paragraph>
         Итерация: {iter}
+        <br />
+        Сезон: {season}
         <Typography.Paragraph>
           Настройки: <br />{" "}
           <pre>

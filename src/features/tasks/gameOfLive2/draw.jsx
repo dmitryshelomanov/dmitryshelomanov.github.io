@@ -49,6 +49,7 @@ const Cell = styled.div`
 
 export function useGameOfLive2() {
   const [iter, setIter] = useState(0);
+  const [currentSeason, setSeason] = useState("");
   const [board, setBoard] = useState(() =>
     Array.from({ length: WORLD_SIZE * WORLD_SIZE }).map((_, index) => ({
       element: <Cell key={index} />,
@@ -78,6 +79,7 @@ export function useGameOfLive2() {
       step(world, season);
       draw(world);
       setIter((prev) => prev + 1);
+      setSeason(season);
     });
 
     return () => {
@@ -87,6 +89,7 @@ export function useGameOfLive2() {
   }, []);
 
   return {
+    season: NATIONS[currentSeason],
     iter,
     board: (
       <Board>
