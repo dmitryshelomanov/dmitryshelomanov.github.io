@@ -3,6 +3,7 @@ import { GameOfLive2Page } from "./GameOfLiveV2";
 import { FromGithubPage } from "./FromGithub";
 import { SnippetsPage } from "./Snippets";
 import { GuessPage } from "./Guess";
+import { snipetsList } from "../features/snipets";
 
 const fromGithub = [
   {
@@ -35,6 +36,12 @@ export const routes = (
 
     <Route path="/guess" element={<GuessPage />} />
     <Route path="/game-of-live-v2" element={<GameOfLive2Page />} />
-    <Route path="/snipets" element={<SnippetsPage />} />
+
+    {snipetsList.map((it) => (
+      <Route
+        path={`/snipets/${it.id}`}
+        element={<SnippetsPage snipet={it} />}
+      />
+    ))}
   </Routes>
 );

@@ -22,6 +22,7 @@ export function useGuess() {
   const [cards, setCards] = useState(() => buildCards());
 
   return {
+    rest: cards.length - 1 - index,
     failed,
     winner: index === cards.length - 1,
     currentCard: useMemo(

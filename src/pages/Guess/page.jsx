@@ -4,38 +4,41 @@ import { Card, useGuess } from "../../features/tasks/guess";
 import { Content, MainTemplate } from "../../ui";
 
 export function GuessPage() {
-  const { currentCard, ...rest } = useGuess();
+  const { currentCard, rest, ...guess } = useGuess();
 
   return (
     <MainTemplate sidebar={<DefaultSidebar />}>
       <Typography.Title>Guess</Typography.Title>
 
       <Content jc="center" ai="center">
+        <Row>
+          <Typography.Text>Еще карт: {rest}</Typography.Text>
+        </Row>
         <Row style={{ marginBottom: 15 }}>
           <Card card={currentCard.card} suit={currentCard.suit} />
         </Row>
 
         <Space size="middle">
           <Col>
-            <Button onClick={rest.greater} disabled={rest.failed}>
+            <Button onClick={guess.greater} disabled={guess.failed}>
               Больше
             </Button>
           </Col>
 
           <Col>
-            <Button onClick={rest.less} disabled={rest.failed}>
+            <Button onClick={guess.less} disabled={guess.failed}>
               Меньше
             </Button>
           </Col>
 
           <Col>
-            <Button onClick={rest.restart}>Заново</Button>
+            <Button onClick={guess.restart}>Заново</Button>
           </Col>
         </Space>
       </Content>
 
-      {rest.failed && <Alert type="error" message="Проиграли" showIcon />}
-      {rest.winner && !rest.failed && (
+      {guess.failed && <Alert type="error" message="Проиграли" showIcon />}
+      {guess.winner && !guess.failed && (
         <Alert type="success" message="Победа !" showIcon />
       )}
     </MainTemplate>
