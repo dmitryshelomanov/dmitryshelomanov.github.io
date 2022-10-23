@@ -1,7 +1,7 @@
 import { Menu } from "antd";
 import { Link, useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import { CaretRightOutlined } from "@ant-design/icons";
+import { snipetsList } from "../../snipets";
 
 export function DefaultSidebar() {
   const { pathname, hash } = useLocation();
@@ -27,20 +27,14 @@ export function DefaultSidebar() {
         <Link to="/guess">Угадай карту</Link>
       </Menu.Item>
 
-      <Menu.ItemGroup title="Снипеты" />
-      <Menu.Item icon={<CaretRightOutlined />} key="/snipets#fib">
-        <HashLink to="/snipets#fib">Фиббоначи</HashLink>
-      </Menu.Item>
-      <Menu.Item icon={<CaretRightOutlined />} key="/snipets#tasks">
-        <HashLink to={{ pathname: "/snipets", hash: "tasks" }}>
-          Задачки
-        </HashLink>
-      </Menu.Item>
-      <Menu.Item icon={<CaretRightOutlined />} key="/snipets#sort">
-        <HashLink to={{ pathname: "/snipets", hash: "sort" }}>
-          Сортировки
-        </HashLink>
-      </Menu.Item>
+      <Menu.SubMenu title="Снипеты">
+        {/* TODO: fix import */}
+        {snipetsList.map((it) => (
+          <Menu.Item icon={<CaretRightOutlined />} key={`/snipets/${it.id}`}>
+            <Link to={`/snipets/${it.id}`}>{it.title}</Link>
+          </Menu.Item>
+        ))}
+      </Menu.SubMenu>
     </Menu>
   );
 }
