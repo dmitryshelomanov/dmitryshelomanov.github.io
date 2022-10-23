@@ -12,7 +12,7 @@ export function loop(cb) {
     if (index >= ITERATIONS) {
       clearInterval(id);
     }
-  }, 1000 / 60);
+  }, 300);
 
   return () => clearInterval(id);
 }
