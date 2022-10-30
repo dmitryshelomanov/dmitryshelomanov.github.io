@@ -53,26 +53,3 @@ export function useGuess() {
     },
   };
 }
-
-// TODO: tests
-(() => {
-  const prev = new CardC([9, "A"]);
-  const next = new CardC([10, "A"]);
-
-  console.log("Следующя карта больше - да", prev.lessThen(next));
-
-  const prev0 = new CardC([9, "A"]);
-  const next0 = new CardC([8, "A"]);
-
-  console.log("Следующя карта больше - нет", prev0.lessThen(next0));
-
-  const prev1 = new CardC([9, "A"]);
-  const next1 = new CardC([10, "A"]);
-
-  console.log("Следующя карта меньше - нет", prev1.greaterThen(next1));
-
-  const prev2 = new CardC([9, "A"]);
-  const next2 = new CardC([8, "A"]);
-
-  console.log("Следующя карта меньше - да", prev2.greaterThen(next2));
-})();

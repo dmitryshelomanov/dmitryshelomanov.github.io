@@ -71,7 +71,7 @@ export function useGameOfLive2() {
       }
     }
 
-    setBoard(board);
+    setBoard(board.slice(0));
   }, []);
 
   useEffect(() => {
@@ -93,9 +93,10 @@ export function useGameOfLive2() {
     iter,
     board: (
       <Board>
-        {board.map((it) =>
+        {board.map((it, idx) =>
           React.cloneElement(it.element, {
             nation: it.className,
+            key: idx,
           })
         )}
       </Board>
