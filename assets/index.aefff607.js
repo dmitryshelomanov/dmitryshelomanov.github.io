@@ -889,7 +889,7 @@ https://github.com/highlightjs/highlight.js/issues/2277`),q=w,te=L);const ce={co
     background-color: #09c;
     color: #fff;
   }
-`;function MX(e){const t=b.exports.useRef();return b.exports.useEffect(()=>{t.current=e},[e]),t.current}const WI=({children:e,from:t,x:n,y:r,...a})=>{const i=MX(e),[o,s]=fX(()=>({config:{duration:300},translateX:`${t[0]*lr+t[0]*5}px`,translateY:`${t[1]*lr+t[1]*5}px`}));return b.exports.useEffect(()=>{s.start({reset:!0,config:{duration:300},from:{translateX:`${t[0]*lr+t[0]*5}px`,translateY:`${t[1]*lr+t[1]*5}px`},to:{translateX:`${n*lr+n*5}px`,translateY:`${r*lr+r*5}px`}})},[t,n,r,s]),b.exports.useEffect(()=>{i!==e&&e&&s.start({config:{duration:300},reverse:!0,from:{scale:1},to:{scale:1.3}})},[i,e,s]),N(wX,{...a,style:o,x:n,y:r,children:e})},PX=hr.div`
+`;function MX(e){const t=b.exports.useRef();return b.exports.useEffect(()=>{t.current=e},[e]),t.current}const WI=b.exports.memo(({children:e,from:t,x:n,y:r,...a})=>{const i=MX(e),[o,s]=fX(()=>({config:{duration:300},translateX:`${t[0]*lr+t[0]*5}px`,translateY:`${t[1]*lr+t[1]*5}px`}));return b.exports.useEffect(()=>{s.start({reset:!0,config:{duration:300},from:{translateX:`${t[0]*lr+t[0]*5}px`,translateY:`${t[1]*lr+t[1]*5}px`},to:{translateX:`${n*lr+n*5}px`,translateY:`${r*lr+r*5}px`}})},[t,n,r,s]),b.exports.useEffect(()=>{i!==e&&e&&s.start({config:{duration:300},reverse:!0,from:{scale:1},to:{scale:1.3}})},[i,e,s]),N(wX,{...a,style:o,x:n,y:r,children:e})}),PX=hr.div`
   width: calc(${lr}px * ${_r} + 5px * ${_r} + 5px);
   height: calc(${lr}px * ${_r} + 5px * ${_r} + 5px);
   display: flex;
