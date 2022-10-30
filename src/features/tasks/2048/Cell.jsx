@@ -81,7 +81,7 @@ function usePrevious(value) {
   return ref.current;
 }
 
-export const CellMain = ({ children, from, x, y, ...rest }) => {
+export const CellMain = memo(({ children, from, x, y, ...rest }) => {
   const prevChildren = usePrevious(children);
 
   const [styles, api] = useSpring(() => ({
@@ -125,4 +125,4 @@ export const CellMain = ({ children, from, x, y, ...rest }) => {
       {children}
     </Cell>
   );
-};
+});
