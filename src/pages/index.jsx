@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
+import { snipetsList } from "../features/snipets";
 import { GameOfLive2Page } from "./GameOfLiveV2";
 import { FromGithubPage } from "./FromGithub";
 import { SnippetsPage } from "./Snippets";
 import { GuessPage } from "./Guess";
-import { snipetsList } from "../features/snipets";
+import { Game2048Page } from "./2048";
 
 const fromGithub = [
   {
@@ -42,6 +43,7 @@ export const routes = (
 
     <Route path="/guess" element={<GuessPage />} />
     <Route path="/game-of-live-v2" element={<GameOfLive2Page />} />
+    <Route path="/2048" element={<Game2048Page />} />
 
     {snipetsList.map((it) => (
       <Route

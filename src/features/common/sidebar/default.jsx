@@ -29,6 +29,9 @@ export function DefaultSidebar() {
       <Menu.Item icon={<CaretRightOutlined />} key="/guess">
         <Link to="/guess">Угадай карту</Link>
       </Menu.Item>
+      <Menu.Item icon={<CaretRightOutlined />} key="/2048">
+        <Link to="/2048">2048</Link>
+      </Menu.Item>
 
       <Menu.SubMenu title="Снипеты">
         {/* TODO: fix import */}
