@@ -71,19 +71,7 @@ const Cell = styled(animated.div)`
   }
 `;
 
-function usePrevious(value) {
-  const ref = useRef();
-
-  useEffect(() => {
-    ref.current = value;
-  }, [value]);
-
-  return ref.current;
-}
-
 export const CellMain = memo(({ children, from, x, y, ...rest }) => {
-  const prevChildren = usePrevious(children);
-
   const [styles, api] = useSpring(() => ({
     config: { duration: 300 },
     translateX: `${from[0] * CELL_SIZE + from[0] * 5}px`,
@@ -106,7 +94,7 @@ export const CellMain = memo(({ children, from, x, y, ...rest }) => {
   }, [from, x, y, api]);
 
   useEffect(() => {
-    if (prevChildren !== children && children) {
+    if (children) {
       api.start({
         config: { duration: 300 },
         reverse: true,
@@ -118,7 +106,7 @@ export const CellMain = memo(({ children, from, x, y, ...rest }) => {
         },
       });
     }
-  }, [prevChildren, children, api]);
+  }, [children, api]);
 
   return (
     <Cell {...rest} style={styles} x={x} y={y}>

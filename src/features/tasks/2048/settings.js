@@ -1,2 +1,2 @@
-export const BOARD_SIZE = 4;
-export const CELL_SIZE = 75;
+export const BOARD_SIZE = 5;
+export const CELL_SIZE = 65;

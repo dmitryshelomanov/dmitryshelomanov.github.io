@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Typography } from "antd";
+import { Button, Typography } from "antd";
 import { useSwipeable } from "react-swipeable";
 import { DefaultSidebar } from "../../features/common/sidebar";
 import {
@@ -18,6 +18,8 @@ export function Game2048Page() {
   const [score, setScore] = useState(0);
 
   const cells = createCells(curentBoard.ref);
+
+  const restart = () => setBoard({ ref: buildBoard() });
 
   const { step } = useMemo(
     () =>
@@ -84,8 +86,9 @@ export function Game2048Page() {
       <Typography.Title>2048</Typography.Title>
       <GameDescription />
       <Content ai="center" jc="center">
-        <Typography.Paragraph>Счет: {score}</Typography.Paragraph>
+        <Typography.Paragraph strong>Счет: {score}</Typography.Paragraph>
         <Board {...handlers}>{cells}</Board>
+        <Button onClick={restart}>Заново</Button>
       </Content>
     </MainTemplate>
   );
