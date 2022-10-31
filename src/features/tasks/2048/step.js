@@ -9,14 +9,14 @@ export const swipeableToArrowMap = {
 
 export const createStep = ({ setBoard, board, onEnd }) => {
   let merged = [];
-  let next = -1;
+  let hasNext = false;
   let score = 0;
 
   function update({ x, y, getNext, dir, nextWasMerged }) {
     const current = board[x][y];
 
     if (current.value) {
-      next = nextCoords[dir]({
+      const next = nextCoords[dir]({
         x,
         y,
         board,
@@ -25,6 +25,8 @@ export const createStep = ({ setBoard, board, onEnd }) => {
       });
 
       if (next !== -1) {
+        hasNext = true;
+
         if (getNext(next).value === 0) {
           getNext(next).value = current.value;
           board[x][y].value = 0;
@@ -111,13 +113,13 @@ export const createStep = ({ setBoard, board, onEnd }) => {
         break;
     }
 
-    if (next !== -1) {
+    if (hasNext) {
       onEnd(score);
     }
 
     score = 0;
     merged = [];
-    next = -1;
+    hasNext = false;
   };
 
   return {

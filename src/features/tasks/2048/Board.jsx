@@ -11,4 +11,5 @@ export const Board = styled.div`
   background-color: #bbada0;
   box-sizing: border-box;
   position: relative;
+  margin-bottom: 16px;
 `;
