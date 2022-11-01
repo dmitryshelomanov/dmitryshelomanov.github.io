@@ -39,13 +39,14 @@ const Header = styled(Layout.Header)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
+  background: var(--hub-menu-bg);
   box-shadow: 0 8px 24px -2px rgb(0 0 0 / 5%);
   z-index: 19;
   padding: 0 24px;
   transition: all 0.2s;
   position: sticky;
   top: 0;
+  color: var(--hub-menu-item-color);
 `;
 
 const ContentWrapper = styled(Layout)`
