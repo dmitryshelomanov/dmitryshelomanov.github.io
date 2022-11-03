@@ -1,27 +1,30 @@
+import { t } from "@lingui/macro";
+import { useLingui } from "@lingui/react";
 import { Typography, Alert, Col, Button, Row, Space } from "antd";
 import { DefaultSidebar } from "../../features/common/sidebar";
 import { Card, useGuess } from "../../features/tasks/guess";
 import { Content, MainTemplate } from "../../ui";
 
 export function GuessPage() {
+  const { i18n } = useLingui();
   const { currentCard, rest, ...guess } = useGuess();
 
   return (
     <MainTemplate sidebar={<DefaultSidebar />}>
-      <Typography.Title>Guess</Typography.Title>
+      <Typography.Title>{t`Угадай карту`}</Typography.Title>
 
       <Space direction="vertical">
         <Alert
-          message="Правила"
-          description={`
-          Нужно угадать больше или меньше следующая карта чем предыдущее.
-          (Туз меньше двойки, но больше остальных)
-        `}
+          message={t`Правила`}
+          description={t`
+            Нужно угадать больше или меньше следующая карта чем предыдущее.
+            (Туз меньше двойки, но больше остальных)
+          `}
         />
 
-        {guess.failed && <Alert type="error" message="Проиграли" showIcon />}
+        {guess.failed && <Alert type="error" message={t`Проиграли`} showIcon />}
         {guess.winner && !guess.failed && (
-          <Alert type="success" message="Победа !" showIcon />
+          <Alert type="success" message={t`Победа !`} showIcon />
         )}
       </Space>
 
@@ -36,18 +39,18 @@ export function GuessPage() {
         <Space size="middle">
           <Col>
             <Button onClick={guess.greater} disabled={guess.failed}>
-              Больше
+              {t`Больше`}
             </Button>
           </Col>
 
           <Col>
             <Button onClick={guess.less} disabled={guess.failed}>
-              Меньше
+              {t`Меньше`}
             </Button>
           </Col>
 
           <Col>
-            <Button onClick={guess.restart}>Заново</Button>
+            <Button onClick={guess.restart}>{t`Заново`}</Button>
           </Col>
         </Space>
       </Content>

@@ -57,7 +57,6 @@ const ContentWrapper = styled(Layout)`
 
   @media (min-width: 1024px) {
     padding-left: 50px;
-    padding-right: 50px;
   }
 
   @media (min-width: calc(1300px - 1px)) {

@@ -11,6 +11,7 @@ export const createStep = ({ setBoard, board, onEnd }) => {
   let merged = [];
   let hasNext = false;
   let score = 0;
+  let has2048 = false;
 
   function update({ x, y, getNext, dir, nextWasMerged }) {
     const current = board[x][y];
@@ -36,6 +37,10 @@ export const createStep = ({ setBoard, board, onEnd }) => {
           score += getNext(next).value;
           board[x][y].value = 0;
           merged.push(getNext(next).id);
+
+          if (getNext(next).value === 2048) {
+            has2048 = true;
+          }
         }
       }
     }
@@ -114,12 +119,13 @@ export const createStep = ({ setBoard, board, onEnd }) => {
     }
 
     if (hasNext) {
-      onEnd(score);
+      onEnd(score, has2048);
     }
 
     score = 0;
     merged = [];
     hasNext = false;
+    has2048 = false;
   };
 
   return {

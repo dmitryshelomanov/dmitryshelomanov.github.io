@@ -1,33 +1,34 @@
+import { defineMessage } from "@lingui/macro";
 import { fib, tasks, sort, fraction, compose, curry } from "./code";
 
 export const snipetsList = [
   {
-    title: "Числа Фибоначи",
+    title: defineMessage({ message: "Числа Фибоначи" }),
     code: fib,
     id: "fib",
   },
   {
-    title: "Задачи с собеседований",
+    title: defineMessage({ message: "Задачи с собеседований" }),
     code: tasks,
     id: "tasks",
   },
   {
-    title: "Сортировки",
+    title: defineMessage({ message: "Сортировки" }),
     code: sort,
     id: "sort",
   },
   {
-    title: "Дробные части",
+    title: defineMessage({ message: "Дробные части" }),
     code: fraction,
     id: "fraction",
   },
   {
-    title: "Композиция функций",
+    title: defineMessage({ message: "Композиция функций" }),
     code: compose,
     id: "compose",
   },
   {
-    title: "Каррирование функций",
+    title: defineMessage({ message: "Каррирование функций" }),
     code: curry,
     id: "curry",
   },
