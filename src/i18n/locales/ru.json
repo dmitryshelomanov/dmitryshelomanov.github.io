@@ -1,0 +1,183 @@
+{
+  "2048": {
+    "translation": "2048",
+    "origin": [["src/features/common/sidebar/default.jsx", 60]],
+    "extractedComments": []
+  },
+  "Game of live classic": {
+    "translation": "Game of live classic",
+    "origin": [["src/features/common/sidebar/default.jsx", 46]],
+    "extractedComments": []
+  },
+  "Game of live v2": {
+    "translation": "Game of live v2",
+    "origin": [["src/pages/GameOfLiveV2/page.jsx", 14]],
+    "extractedComments": []
+  },
+  "Snake AI": {
+    "translation": "Snake AI",
+    "origin": [["src/features/common/sidebar/default.jsx", 40]],
+    "extractedComments": []
+  },
+  "Towers": {
+    "translation": "Towers",
+    "origin": [["src/features/common/sidebar/default.jsx", 43]],
+    "extractedComments": []
+  },
+  "Больше": {
+    "translation": "Больше",
+    "origin": [["src/pages/Guess/page.jsx", 42]],
+    "extractedComments": []
+  },
+  "Вы победили": {
+    "translation": "Вы победили",
+    "origin": [["src/pages/2048/page.jsx", 146]],
+    "extractedComments": []
+  },
+  "Вы проиграли": {
+    "translation": "Вы проиграли",
+    "origin": [["src/pages/2048/page.jsx", 146]],
+    "extractedComments": []
+  },
+  "Демки из Hub": {
+    "translation": "Демки из Hub",
+    "origin": [["src/features/common/sidebar/default.jsx", 52]],
+    "extractedComments": []
+  },
+  "Демки из гитхаба": {
+    "translation": "Демки из гитхаба",
+    "origin": [["src/features/common/sidebar/default.jsx", 38]],
+    "extractedComments": []
+  },
+  "Дробные части": {
+    "translation": "Дробные части",
+    "origin": [["src/features/snipets/list.js", 21]],
+    "extractedComments": []
+  },
+  "Задачи с собеседований": {
+    "translation": "Задачи с собеседований",
+    "origin": [["src/features/snipets/list.js", 11]],
+    "extractedComments": []
+  },
+  "Заново": {
+    "translation": "Заново",
+    "origin": [
+      ["src/pages/2048/page.jsx", 153],
+      ["src/pages/Guess/page.jsx", 53]
+    ],
+    "extractedComments": []
+  },
+  "Итерация: {iter}": {
+    "translation": "Итерация: {iter}",
+    "origin": [["src/pages/GameOfLiveV2/page.jsx", 22]],
+    "extractedComments": []
+  },
+  "Каррирование функций": {
+    "translation": "Каррирование функций",
+    "origin": [["src/features/snipets/list.js", 31]],
+    "extractedComments": []
+  },
+  "Классическая игра 2048": {
+    "translation": "Классическая игра 2048",
+    "origin": [["src/features/tasks/2048/Description.jsx", 22]],
+    "extractedComments": []
+  },
+  "Композиция функций": {
+    "translation": "Композиция функций",
+    "origin": [["src/features/snipets/list.js", 26]],
+    "extractedComments": []
+  },
+  "Меньше": {
+    "translation": "Меньше",
+    "origin": [["src/pages/Guess/page.jsx", 48]],
+    "extractedComments": []
+  },
+  "Музыкальный плеер": {
+    "translation": "Музыкальный плеер",
+    "origin": [["src/features/common/sidebar/default.jsx", 49]],
+    "extractedComments": []
+  },
+  "Настройки: <0/> <1><2>{0}</2></1>": {
+    "translation": "Настройки: <0/> <1><2>{0}</2></1>",
+    "origin": [["src/pages/GameOfLiveV2/page.jsx", 26]],
+    "extractedComments": []
+  },
+  "Нужно угадать больше или меньше следующая карта чем предыдущее.\n(Туз меньше двойки, но больше остальных)": {
+    "translation": "Нужно угадать больше или меньше следующая карта чем предыдущее.\n(Туз меньше двойки, но больше остальных)",
+    "origin": [["src/pages/Guess/page.jsx", 19]],
+    "extractedComments": []
+  },
+  "По сути та же игра, но не много другие правила + ограниченные переходы": {
+    "translation": "По сути та же игра, но не много другие правила + ограниченные переходы",
+    "origin": [["src/pages/GameOfLiveV2/page.jsx", 19]],
+    "extractedComments": []
+  },
+  "Победа !": {
+    "translation": "Победа !",
+    "origin": [["src/pages/Guess/page.jsx", 27]],
+    "extractedComments": []
+  },
+  "Подобие игры жизнь": {
+    "translation": "Подобие игры жизнь",
+    "origin": [["src/features/common/sidebar/default.jsx", 54]],
+    "extractedComments": []
+  },
+  "Правила": {
+    "translation": "Правила",
+    "origin": [["src/pages/Guess/page.jsx", 18]],
+    "extractedComments": []
+  },
+  "Проиграли": {
+    "translation": "Проиграли",
+    "origin": [["src/pages/Guess/page.jsx", 25]],
+    "extractedComments": []
+  },
+  "Сезон: {season}": {
+    "translation": "Сезон: {season}",
+    "origin": [["src/pages/GameOfLiveV2/page.jsx", 24]],
+    "extractedComments": []
+  },
+  "Снипеты": {
+    "translation": "Снипеты",
+    "origin": [["src/features/common/sidebar/default.jsx", 63]],
+    "extractedComments": []
+  },
+  "Сортировки": {
+    "translation": "Сортировки",
+    "origin": [["src/features/snipets/list.js", 16]],
+    "extractedComments": []
+  },
+  "Счет <0/> {score}": {
+    "translation": "Счет <0/> {score}",
+    "origin": [["src/pages/2048/page.jsx", 137]],
+    "extractedComments": []
+  },
+  "Угадай карту": {
+    "translation": "Угадай карту",
+    "origin": [
+      ["src/features/common/sidebar/default.jsx", 57],
+      ["src/pages/Guess/page.jsx", 14]
+    ],
+    "extractedComments": []
+  },
+  "Управление доской через стрелки →, ←, ↑, ↓ ": {
+    "translation": "Управление доской через стрелки →, ←, ↑, ↓ ",
+    "origin": [["src/features/tasks/2048/Description.jsx", 6]],
+    "extractedComments": []
+  },
+  "Управление через свайпы по доске": {
+    "translation": "Управление через свайпы по доске",
+    "origin": [["src/features/tasks/2048/Description.jsx", 9]],
+    "extractedComments": []
+  },
+  "Числа Фибоначи": {
+    "translation": "Числа Фибоначи",
+    "origin": [["src/features/snipets/list.js", 6]],
+    "extractedComments": []
+  },
+  "Язык": {
+    "translation": "Язык",
+    "origin": [["src/features/common/sidebar/default.jsx", 22]],
+    "extractedComments": []
+  }
+}
