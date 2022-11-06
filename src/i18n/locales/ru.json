@@ -14,6 +14,11 @@
     "origin": [["src/pages/GameOfLiveV2/page.jsx", 14]],
     "extractedComments": []
   },
+  "Leaderboard": {
+    "translation": "Таблица лидеров",
+    "origin": [["src/features/tasks/2048/Scoreboard.jsx", 40]],
+    "extractedComments": []
+  },
   "Snake AI": {
     "translation": "Snake AI",
     "origin": [["src/features/common/sidebar/default.jsx", 40]],
@@ -31,12 +36,12 @@
   },
   "Вы победили": {
     "translation": "Вы победили",
-    "origin": [["src/pages/2048/page.jsx", 146]],
+    "origin": [["src/pages/2048/page.jsx", 151]],
     "extractedComments": []
   },
   "Вы проиграли": {
     "translation": "Вы проиграли",
-    "origin": [["src/pages/2048/page.jsx", 146]],
+    "origin": [["src/pages/2048/page.jsx", 151]],
     "extractedComments": []
   },
   "Демки из Hub": {
@@ -62,7 +67,7 @@
   "Заново": {
     "translation": "Заново",
     "origin": [
-      ["src/pages/2048/page.jsx", 153],
+      ["src/pages/2048/page.jsx", 158],
       ["src/pages/Guess/page.jsx", 53]
     ],
     "extractedComments": []
@@ -149,7 +154,7 @@
   },
   "Счет <0/> {score}": {
     "translation": "Счет <0/> {score}",
-    "origin": [["src/pages/2048/page.jsx", 137]],
+    "origin": [["src/pages/2048/page.jsx", 142]],
     "extractedComments": []
   },
   "Угадай карту": {

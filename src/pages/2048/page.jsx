@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { t, Trans } from "@lingui/macro";
+import { useLingui } from "@lingui/react";
 import styled, { css } from "styled-components";
-import { Button, Typography } from "antd";
+import { Button, Col, Typography, Space } from "antd";
 import { useSwipeable } from "react-swipeable";
 import { DefaultSidebar } from "../../features/common/sidebar";
 import {
@@ -12,9 +13,10 @@ import {
   swipeableToArrowMap,
   cellToRandom,
   GameDescription,
+  Scoreboard,
+  useScoreboard,
 } from "../../features/tasks/2048";
 import { Content, MainTemplate } from "../../ui";
-import { useLingui } from "@lingui/react";
 
 const Score = styled(Typography.Paragraph)`
   padding: 20px 10px;
@@ -56,10 +58,11 @@ const DescriptionPane = styled.div`
 `;
 
 export function Game2048Page() {
+  const { i18n } = useLingui();
   const [curentBoard, setBoard] = useState({ ref: buildBoard() });
   const [score, setScore] = useState(0);
   const [win, setWin] = useState(false);
-  const { i18n } = useLingui();
+  const { users, currentId } = useScoreboard({ win, score });
 
   const cells = createCells(curentBoard.ref);
 
@@ -133,24 +136,32 @@ export function Game2048Page() {
       <Typography.Title>2048</Typography.Title>
       <GameDescription />
       <Content ai="center" jc="center">
-        <Score>
-          <Trans>
-            Счет <br /> {score}
-          </Trans>
-        </Score>
+        <Space wrap align="start" size="large">
+          <Col>
+            <Score>
+              <Trans>
+                Счет <br /> {score}
+              </Trans>
+            </Score>
 
-        <Board {...handlers}>
-          {win && (
-            <DescriptionPane>
-              <Typography.Paragraph>
-                {!win ? t`Вы проиграли` : t`Вы победили`}
-              </Typography.Paragraph>
-            </DescriptionPane>
-          )}
+            <Board {...handlers}>
+              {win && (
+                <DescriptionPane>
+                  <Typography.Paragraph>
+                    {!win ? t`Вы проиграли` : t`Вы победили`}
+                  </Typography.Paragraph>
+                </DescriptionPane>
+              )}
 
-          {cells}
-        </Board>
-        <Button onClick={restart}>{t`Заново`}</Button>
+              {cells}
+            </Board>
+            <Button onClick={restart}>{t`Заново`}</Button>
+          </Col>
+
+          <Col>
+            <Scoreboard users={users} currentId={currentId} />
+          </Col>
+        </Space>
       </Content>
     </MainTemplate>
   );

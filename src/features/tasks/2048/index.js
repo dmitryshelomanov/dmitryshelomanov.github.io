@@ -5,3 +5,5 @@ export * from "./Board";
 export * from "./builders";
 export * from "./step";
 export * from "./Description";
+export * from "./Scoreboard";
+export * from "./useScoreboard";
