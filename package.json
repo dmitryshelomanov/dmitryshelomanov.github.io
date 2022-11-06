@@ -18,6 +18,7 @@
     "@lingui/react": "^3.14.0",
     "@monaco-editor/react": "^4.4.6",
     "antd": "^4.23.6",
+    "firebase": "^9.13.0",
     "iframe-resizer-react": "^1.1.0",
     "make-plural": "^7.1.0",
     "monaco-themes": "^0.4.2",

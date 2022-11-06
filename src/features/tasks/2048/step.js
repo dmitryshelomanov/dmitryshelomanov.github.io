@@ -98,8 +98,6 @@ export const createStep = ({ setBoard, board, onEnd }) => {
       case "ArrowRight": {
         for (let y = board.length - 1; y >= 0; y--) {
           for (let x = board.length - 1; x >= 0; x--) {
-            const current = board[x][y];
-
             update({
               x,
               y,
