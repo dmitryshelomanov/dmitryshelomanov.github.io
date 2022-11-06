@@ -12,4 +12,5 @@ export const Board = styled.div`
   box-sizing: border-box;
   position: relative;
   margin-bottom: 16px;
+  touch-action: none;
 `;
