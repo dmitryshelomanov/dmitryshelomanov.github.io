@@ -4,6 +4,14 @@
     "origin": [["src/features/common/sidebar/default.jsx", 60]],
     "extractedComments": []
   },
+  "5 букв": {
+    "translation": "5 letter words",
+    "origin": [
+      ["src/features/common/sidebar/default.jsx", 63],
+      ["src/pages/N5world/page.jsx", 35]
+    ],
+    "extractedComments": []
+  },
   "Game of live classic": {
     "translation": "",
     "origin": [["src/features/common/sidebar/default.jsx", 46]],
@@ -36,12 +44,12 @@
   },
   "Вы победили": {
     "translation": "You are win",
-    "origin": [["src/pages/2048/page.jsx", 151]],
+    "origin": [["src/pages/2048/page.jsx", 124]],
     "extractedComments": []
   },
   "Вы проиграли": {
     "translation": "You are lose",
-    "origin": [["src/pages/2048/page.jsx", 151]],
+    "origin": [["src/pages/2048/page.jsx", 124]],
     "extractedComments": []
   },
   "Демки из Hub": {
@@ -59,6 +67,11 @@
     "origin": [["src/features/snipets/list.js", 21]],
     "extractedComments": []
   },
+  "Еще": {
+    "translation": "",
+    "origin": [["src/pages/N5world/page.jsx", 76]],
+    "extractedComments": []
+  },
   "Задачи с собеседований": {
     "translation": "Tasks from interviews",
     "origin": [["src/features/snipets/list.js", 11]],
@@ -67,7 +80,7 @@
   "Заново": {
     "translation": "Restart",
     "origin": [
-      ["src/pages/2048/page.jsx", 158],
+      ["src/pages/2048/page.jsx", 131],
       ["src/pages/Guess/page.jsx", 53]
     ],
     "extractedComments": []
@@ -144,7 +157,7 @@
   },
   "Снипеты": {
     "translation": "Snippets",
-    "origin": [["src/features/common/sidebar/default.jsx", 63]],
+    "origin": [["src/features/common/sidebar/default.jsx", 66]],
     "extractedComments": []
   },
   "Сортировки": {
@@ -154,7 +167,7 @@
   },
   "Счет <0/> {score}": {
     "translation": "Score <0/> {score}",
-    "origin": [["src/pages/2048/page.jsx", 142]],
+    "origin": [["src/pages/2048/page.jsx", 115]],
     "extractedComments": []
   },
   "Угадай карту": {
@@ -175,6 +188,11 @@
     "origin": [["src/features/tasks/2048/Description.jsx", 9]],
     "extractedComments": []
   },
+  "Уровень": {
+    "translation": "Level",
+    "origin": [["src/pages/N5world/page.jsx", 62]],
+    "extractedComments": []
+  },
   "Числа Фибоначи": {
     "translation": "Fibonacci numbers",
     "origin": [["src/features/snipets/list.js", 6]],
@@ -183,6 +201,11 @@
   "Язык": {
     "translation": "Language",
     "origin": [["src/features/common/sidebar/default.jsx", 22]],
+    "extractedComments": []
+  },
+  "ввод": {
+    "translation": "Enter",
+    "origin": [["src/features/tasks/n5word/Keyboard.jsx", 14]],
     "extractedComments": []
   }
 }

@@ -59,6 +59,9 @@ export function DefaultSidebar() {
       <Menu.Item icon={<N2048Icon />} key="/2048">
         <Link to="/2048">{t`2048`}</Link>
       </Menu.Item>
+      <Menu.Item icon={<N2048Icon />} key="/5word">
+        <Link to="/5word">{t`5 букв`}</Link>
+      </Menu.Item>
 
       <Menu.SubMenu title={t`Снипеты`}>
         {/* TODO: fix import */}
