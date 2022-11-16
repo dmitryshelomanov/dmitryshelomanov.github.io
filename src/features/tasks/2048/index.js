@@ -7,3 +7,4 @@ export * from "./step";
 export * from "./Description";
 export * from "./Scoreboard";
 export * from "./useScoreboard";
+export * from "./DescriptionPane";

@@ -15,6 +15,7 @@ import {
   GameDescription,
   Scoreboard,
   useScoreboard,
+  DescriptionPane,
 } from "../../features/tasks/2048";
 import { Content, MainTemplate } from "../../ui";
 
@@ -27,34 +28,6 @@ const Score = styled(Typography.Paragraph)`
   min-width: 100px;
   padding: 3px 10px;
   font-weight: bold;
-`;
-
-const DescriptionPane = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-
-  ${(p) =>
-    p.failed
-      ? css`
-          background: rgba(212, 85, 85, 0.5);
-        `
-      : css`
-          background: rgba(212, 185, 85, 0.5);
-        `}
-
-  > .ant-typography {
-    font-size: 36px;
-    font-weight: bold;
-    color: #fff;
-  }
 `;
 
 export function Game2048Page() {
