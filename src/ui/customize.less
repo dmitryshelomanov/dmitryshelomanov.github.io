@@ -9,12 +9,26 @@
 html,
 body {
   overflow-x: hidden;
-  background-color: var(--hub-menu-bg);
   scroll-behavior: smooth;
 }
 
 body {
   padding: 24px 0px;
+
+  &::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background-image: url(/part.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.25;
+    filter: blur(50px);
+    z-index: -1;
+  }
 }
 
 #root {
