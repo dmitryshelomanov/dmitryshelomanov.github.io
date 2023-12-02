@@ -62,8 +62,6 @@ Error generating stack: `+o.message+`
   align-items: center;
   flex-direction: column;
   gap: 8px;
-  overflow-y: auto;
-  padding: 24px 0px;
 `,Tt=Zf.div`
   z-index: 2;
   background-color: #fff;
