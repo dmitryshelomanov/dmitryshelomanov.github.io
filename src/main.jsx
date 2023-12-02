@@ -10,8 +10,6 @@ const Page = styled.section`
   align-items: center;
   flex-direction: column;
   gap: 8px;
-  overflow-y: auto;
-  padding: 24px 0px;
 `;
 
 const Stub = styled.div`
