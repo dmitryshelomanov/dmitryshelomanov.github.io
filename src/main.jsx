@@ -12,6 +12,12 @@ const Page = styled.section`
   gap: 8px;
 `;
 
+const Avatar = styled.img`
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+`;
+
 const Stub = styled.div`
   z-index: 2;
   background-color: #fff;
@@ -21,18 +27,15 @@ const Stub = styled.div`
   max-width: 320px;
   transition: transform 0.3s ease-in-out;
 
-  &:hover {
-    transform: scale(1.05);
-  }
-
   a {
     text-decoration: underline;
+    margin: 8px 0px;
   }
 
   a,
   p {
     color: #607d8b;
-    margin: 0;
+    display: block;
   }
 `;
 
@@ -58,6 +61,8 @@ const projects = [
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Page>
+    <Avatar src="/avatar.jpg" />
+    <h3>@dmitryshelomanov</h3>
     <Stub>
       <p>
         Привет! Меня зовут <strong>Шеломанов Дмитрий</strong>
@@ -71,23 +76,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <p>
         <strong>Где меня найти:</strong>
       </p>
-    </Stub>
-    <Stub>
       <a href="https://vk.com/dmitryshelomanov" target="_blank">
         vk
       </a>
-    </Stub>
-    <Stub>
       <a href="malito:dmitryshelomanov@mail.ru" target="_blank">
         email
       </a>
-    </Stub>
-    <Stub>
       <a href="https://github.com/dmitryshelomanov" target="_blank">
         github
       </a>
-    </Stub>
-    <Stub>
       <a href="https://t.me/dmitryshelomanov" target="_blank">
         telegram
       </a>
@@ -96,14 +93,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <p>
         <strong>Проекты:</strong>
       </p>
-    </Stub>
 
-    {projects.map((project) => (
-      <Stub key={project.link}>
-        <a href={project.link} target="_blank">
+      {projects.map((project) => (
+        <a href={project.link} target="_blank" key={project.link}>
           {project.title}
         </a>
-      </Stub>
-    ))}
+      ))}
+    </Stub>
   </Page>
 );
