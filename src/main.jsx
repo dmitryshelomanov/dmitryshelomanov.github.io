@@ -1,104 +1,214 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import styled from "styled-components";
+import dayjs from "dayjs";
+import styled, { css } from "styled-components";
+import { desktop } from "./ui/responsive";
+import { projects } from "./projects";
+import { expirience, Tag } from "./expirience";
+import { expiriencePlural } from "./lib/plural";
 import "./ui/customize.less";
 
 const Page = styled.section`
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   gap: 8px;
+  margin-bottom: 3rem;
 `;
 
-const Avatar = styled.img`
-  border-radius: 50%;
-  width: 96px;
-  height: 96px;
+const Hero = styled.h1`
+  margin-top: 32px;
+  font-size: 36px;
+  white-space: pre;
+  --hero-offset: 0.15em;
+
+  ${desktop(css`
+    font-size: 82px;
+  `)}
+
+  span {
+    position: relative;
+    cursor: default;
+    display: inline-block;
+
+    @supports (mix-blend-mode: multiply) {
+      color: #ff00ff;
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        transform: none;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: attr(content);
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    @supports (mix-blend-mode: multiply) {
+      &::before {
+        transform: translate(
+          calc(-1 * var(--hero-offset)),
+          calc(-1 * var(--hero-offset))
+        );
+        color: #ffff00;
+      }
+
+      &::after {
+        transform: translate(var(--hero-offset), var(--hero-offset));
+        color: #00ffff;
+      }
+    }
+  }
 `;
 
-const Stub = styled.div`
-  z-index: 2;
-  background-color: #fff;
-  padding: 24px;
-  border-radius: 6px;
-  width: 100%;
+const Description = styled.h4`
+  font-size: 21px;
+  margin-top: 21px;
+  font-weight: 600;
+`;
+
+const AppPreview = styled.img`
+  width: auto;
   max-width: 320px;
-  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  max-height: 256px;
+
+  ${desktop(css`
+    max-width: 580px;
+  `)}
+`;
+
+const Socials = styled.div`
+  flex-direction: row;
+  gap: 16px;
+  display: flex;
+  margin-top: 30px;
 
   a {
-    text-decoration: underline;
-    margin: 8px 0px;
+    margin: 0px;
   }
 
-  a,
-  p {
-    color: #607d8b;
-    display: block;
+  img {
+    width: 36px;
+    height: 36px;
   }
 `;
 
-const projects = [
-  {
-    title: "Game of Live 🎲",
-    link: "https://dmitryshelomanov.github.io/reason-game-of-life/",
-  },
-  {
-    title: "Towers of Hanoi 👜",
-    link: "https://dmitryshelomanov.github.io/tower_of_hanoi/",
-  },
-  { title: "Snake AI 🐍", link: "https://dmitryshelomanov.github.io/snake//" },
-  {
-    title: "Мобитва next 🎮",
-    link: "https://mobilefight.github.io/mobile-fight/",
-  },
-  {
-    title: "Музыкальный плеер 🎹",
-    link: "https://dmitryshelomanov.github.io/music-player/#/",
-  },
-];
+const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 8px;
+  gap: 21px;
+
+  li {
+    list-style: none;
+  }
+
+  h2 {
+    text-decoration: underline;
+  }
+`;
+
+const FULL_TIME = Math.ceil(
+  dayjs(Date.now()).diff(
+    dayjs().set("date", 1).set("month", 6).set("year", 2017),
+    "year",
+    true
+  )
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Page>
-    <Avatar src="/avatar.jpg" />
-    <h3>@dmitryshelomanov</h3>
-    <Stub>
-      <p>
-        Привет! Меня зовут <strong>Шеломанов Дмитрий</strong>
-      </p>
-      <p>Frontend engineer</p>
-      <a href="https://dmitryshelomanov.github.io/cv/" target="_blank">
-        <strong>Ссылка на резюме</strong>
-      </a>
-    </Stub>
-    <Stub>
-      <p>
-        <strong>Где меня найти:</strong>
-      </p>
+    <Hero>
+      Привет<i>!</i>
+      <br />Я Дмитрий.
+    </Hero>
+
+    <Description>Занимаюсь фронтенд разработкой в ТД ЦУМ</Description>
+
+    <Socials>
       <a href="https://vk.com/dmitryshelomanov" target="_blank">
-        vk
+        <img src="/icons/vk-svgrepo-com.svg" />
       </a>
       <a href="malito:dmitryshelomanov@mail.ru" target="_blank">
-        email
-      </a>
-      <a href="https://github.com/dmitryshelomanov" target="_blank">
-        github
+        <img src="/icons/mail-ru-svgrepo-com.svg" />
       </a>
       <a href="https://t.me/dmitryshelomanov" target="_blank">
-        telegram
+        <img src="/icons/telegram-svgrepo-com.svg" />
       </a>
-    </Stub>
-    <Stub>
-      <p>
-        <strong>Проекты:</strong>
-      </p>
+      <a href="https://github.com/dmitryshelomanov" target="_blank">
+        <img src="/icons/github-svgrepo-com.svg" />
+      </a>
+    </Socials>
 
-      {projects.map((project) => (
-        <a href={project.link} target="_blank" key={project.link}>
-          {project.title}
-        </a>
+    <List>
+      <Hero>
+        <span content="Карьера">
+          Карьера <Tag>{expiriencePlural(FULL_TIME)}</Tag>
+        </span>
+      </Hero>
+
+      {expirience.map((it) => (
+        <li key={it.link}>
+          <h2>
+            <a href="https://dmitryshelomanov.github.io/cv">{it.company}</a>
+          </h2>
+          <p>{it.position}</p>
+        </li>
       ))}
-    </Stub>
+    </List>
+
+    <List>
+      <Hero>
+        <span content="Проекты">Проекты</span>
+      </Hero>
+
+      <li key="explory">
+        <h2>
+          <a href="#">Explory</a>
+        </h2>
+        <p>Приложение по поиску мероприятий IOS/Android</p>
+        <AppPreview
+          src="/explory.jpeg"
+          alt="Explory App"
+          onClick={() => {
+            window.open("/explory.jpeg", "_blank");
+          }}
+        />
+      </li>
+
+      {projects.map((it) => (
+        <li key={it.link}>
+          <h2>
+            <a href={it.link}>{it.title}</a>
+          </h2>
+          <p>{it.text}</p>
+
+          {it.img && (
+            <AppPreview
+              src={it.img}
+              onClick={() => {
+                window.open(it.link, "_blank");
+              }}
+            />
+          )}
+        </li>
+      ))}
+    </List>
   </Page>
 );
