@@ -53,7 +53,7 @@ export function N5WordPage() {
               </p>
             </>
           }
-          message="Класическая ига 5 букв"
+          message="Классическая ига 5 букв"
         />
 
         <Alert

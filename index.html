@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta content="ie=edge" http-equiv="x-ua-compatible" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.bunny.net/css?family=Poppins:700,700i,800,800i|Zilla+Slab:400,400i,500,500i,600,600i&subset=latin-ext&display=swap"
+    />
     <meta
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
       name="viewport"
@@ -36,6 +40,8 @@
       name="twitter:image"
       content="https://dmitryshelomanov.github.io/dshelomanov.jpg"
     />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="1260" />
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
         m[i] =
@@ -68,6 +74,24 @@
         accurateTrackBounce: true,
       });
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "description": "Привет! Я Дмитрий - Frontend Engineer",
+        "headline": "Шеломанов Дмитрий",
+        "image": {
+          "height": 640,
+          "width": 1280,
+          "url": "https://dmitryshelomanov.github.io/dshelomanov.jpg",
+          "@type": "imageObject"
+        },
+        "name": "Шеломанов Дмитрий",
+        "url": "https://dmitryshelomanov.github.io/dshelomanov.jpg"
+      }
+    </script>
+  </head>
+  <body>
     <noscript
       ><div>
         <img
@@ -76,8 +100,6 @@
           alt=""
         /></div
     ></noscript>
-  </head>
-  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
