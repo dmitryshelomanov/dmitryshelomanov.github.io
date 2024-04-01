@@ -17,6 +17,10 @@ const Page = styled.section`
   flex-direction: column;
   gap: 8px;
   margin-bottom: 3rem;
+
+  .skills {
+    max-width: 100%;
+  }
 `;
 
 const Hero = styled.h1`
@@ -156,6 +160,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <img src="/icons/github-svgrepo-com.svg" />
       </a>
     </Socials>
+
+    <List>
+      <img
+        src="https://skillicons.dev/icons?i=js,ts,html,css,react,nodejs,docker"
+        className="skills"
+      />
+    </List>
 
     <List>
       <Hero>
