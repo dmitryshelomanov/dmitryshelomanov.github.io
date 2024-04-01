@@ -7,6 +7,7 @@ import { projects } from "./projects";
 import { expirience, Tag } from "./expirience";
 import { expiriencePlural } from "./lib/plural";
 import "./ui/customize.less";
+import { articles } from "./artcicles";
 
 const Page = styled.section`
   width: 100%;
@@ -87,7 +88,7 @@ const AppPreview = styled.img`
   max-height: 256px;
 
   ${desktop(css`
-    max-width: 580px;
+    max-width: 780px;
   `)}
 `;
 
@@ -175,6 +176,21 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
     <List>
       <Hero>
+        <span content="Статьи">Статьи</span>
+      </Hero>
+
+      {articles.map((it) => (
+        <li key={it.link}>
+          <h2>
+            <a href={it.link}>{it.title}</a>
+          </h2>
+          <p>{it.text}</p>
+        </li>
+      ))}
+    </List>
+
+    <List>
+      <Hero>
         <span content="Проекты">Проекты</span>
       </Hero>
 
@@ -182,7 +198,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <h2>
           <a href="#">Explory</a>
         </h2>
-        <p>Приложение по поиску мероприятий IOS/Android</p>
+        <p>
+          Приложение по поиску мероприятий IOS/Android. В котором следующие
+          возможности: создание ивента и приглошение участников, поиск ивентов
+          (так же на карте), уведомления, профиль и фоловеры
+        </p>
         <AppPreview
           src="/explory.jpeg"
           alt="Explory App"
