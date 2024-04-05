@@ -27,7 +27,7 @@ export const projects = [
     title: "Game of Live",
     link: "https://dmitryshelomanov.github.io/reason-game-of-life/",
     text: <>Классическая игра Жизнь на&nbsp;ReasonJS</>,
-    video: "/gameoflive.mp4",
+    img: "/gameOfLive.jpeg",
   },
   {
     title: "Towers of Hanoi",

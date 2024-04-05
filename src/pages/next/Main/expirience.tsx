@@ -31,7 +31,7 @@ export const expirience = [
     company: "Цум",
     position: (
       <>
-        Senior Frontend Developer / Team lead (Сентябрь 2021 - по настоящее
+        Senior Frontend Developer / Team lead (Сентябрь&nbsp;2021 - по настоящее
         время, <Tag>{expiriencePlural(LAST_COMPANY_TIME)}</Tag>)
       </>
     ),
@@ -41,7 +41,7 @@ export const expirience = [
     company: "ООО БК «Олимп»",
     position: (
       <>
-        Senior Frontend Developer (Июнь 2020 - Сентябрь 2021,{" "}
+        Senior Frontend Developer (Июнь&nbsp;2020 - Сентябрь&nbsp;2021,{" "}
         <Tag>1 год 2 месяца</Tag>)
       </>
     ),
@@ -51,7 +51,7 @@ export const expirience = [
     company: "ООО «Диалог»",
     position: (
       <>
-        Senior Frontend Developer (Май 2019 - Август 2020,{" "}
+        Senior Frontend Developer (Май&nbsp;2019 - Август&nbsp;2020,{" "}
         <Tag>1 год 4 месяца</Tag>)
       </>
     ),
@@ -61,7 +61,8 @@ export const expirience = [
     company: "Unitemp",
     position: (
       <>
-        Старший разработчик (Февраль 2018 - Май 2019, <Tag>1 год 3 месяца</Tag>)
+        Старший разработчик (Февраль&nbsp;2018 - Май&nbsp;2019,{" "}
+        <Tag>1 год 3 месяца</Tag>)
       </>
     ),
   },
@@ -70,7 +71,8 @@ export const expirience = [
     company: `ООО "Мир Идей"`,
     position: (
       <>
-        Web developer (Июль 2017 - Февраль 2018, <Tag>8 месяцев</Tag>)
+        Web developer (Июль&nbsp;2017 - Февраль&nbsp;2018,{" "}
+        <Tag>8&nbsp;месяцев</Tag>)
       </>
     ),
   },
