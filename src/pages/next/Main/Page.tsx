@@ -10,25 +10,6 @@ import { expirience, Tag } from "./expirience";
 import { articles } from "./artcicles";
 import { Link } from "react-router-dom";
 
-const Page = styled.section`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 3rem;
-
-  video {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .skills {
-    max-width: 100%;
-  }
-`;
-
 const Description = styled.h4`
   font-size: 21px;
   margin-top: 21px;
@@ -89,7 +70,7 @@ const FULL_TIME = Math.ceil(
 
 export function MainPage() {
   return (
-    <Page>
+    <>
       <Hero>
         Привет<i>!</i>
         <br />Я Дмитрий.
@@ -219,6 +200,6 @@ export function MainPage() {
           </li>
         ))}
       </List>
-    </Page>
+    </>
   );
 }
