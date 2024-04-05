@@ -18,6 +18,10 @@ export type Expirience = {
   responsibility: ResponsibilityTyped[];
   achievements: string[];
   techonologies: string[];
+  projects: {
+    title: string;
+    link: string;
+  }[];
 };
 
 export const expirience: Record<string, Expirience> = {
@@ -69,6 +73,16 @@ export const expirience: Record<string, Expirience> = {
       "Webpack",
       "gRpc",
     ],
+    projects: [
+      {
+        title: "Основной онлайн магазин Цум",
+        link: "https://tsum.ru/",
+      },
+      {
+        title: "Ресейл платформа",
+        link: "https://collect.tsum.ru/",
+      },
+    ],
   },
   olimp: {
     company: "ООО БК «Олимп»",
@@ -97,6 +111,12 @@ export const expirience: Record<string, Expirience> = {
       "JS, ES6",
       "React, Styled Components, Effector, Typescript",
       "Webpack",
+    ],
+    projects: [
+      {
+        title: "Основной сайт олимп бет",
+        link: "https://www.olimp.bet/",
+      },
     ],
   },
   dialog: {
@@ -127,6 +147,12 @@ export const expirience: Record<string, Expirience> = {
       "React, AstroTurf, RxJs, RxDb, Flow, Testing-library",
       "Webpack, Lerna",
     ],
+    projects: [
+      {
+        title: "Dialog месседжер",
+        link: "https://developers.sber.ru/portal/products/dialog-plus-enterprise/legal",
+      },
+    ],
   },
   unitemp: {
     company: "Unitemp",
@@ -148,6 +174,12 @@ export const expirience: Record<string, Expirience> = {
       "JS, ES6",
       "React Native",
       "redux, redux-thunk, recompose, нативные библиотеки",
+    ],
+    projects: [
+      {
+        title: "Приложение по поиску работы",
+        link: "https://vk.com/zarabotal_msk",
+      },
     ],
   },
   idea: {
@@ -171,5 +203,6 @@ export const expirience: Record<string, Expirience> = {
       "Vue, React, larave",
       "Webpack, redux, redux-thunk",
     ],
+    projects: [],
   },
 };

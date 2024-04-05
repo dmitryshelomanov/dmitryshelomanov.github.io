@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import styled from "styled-components";
 import "../../../ui/customize.less";
 import { Hero } from "../../../ui/atoms";
@@ -63,6 +63,10 @@ export function CompanyDetails() {
 
   const exp = expirience[company!];
 
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   if (!exp) {
     return (
       <Page>
@@ -86,6 +90,23 @@ export function CompanyDetails() {
 
       <Content>
         <p>- {exp.position}</p>
+
+        {exp.projects.length > 0 && (
+          <>
+            <h2>Проекты:</h2>
+
+            <List>
+              {exp.projects.map((it, idx) => (
+                <li key={idx}>
+                  <a href={it.link} target="_blank" rel="noreferrer">
+                    - {it.title}
+                  </a>
+                </li>
+              ))}
+            </List>
+          </>
+        )}
+
         <h2>Обязанности:</h2>
 
         <div>
@@ -114,7 +135,7 @@ export function CompanyDetails() {
 
             <List>
               {exp.achievements.map((it, idx) => (
-                <li key={idx}>{it}</li>
+                <li key={idx}>- {it}</li>
               ))}
             </List>
           </>
@@ -123,7 +144,7 @@ export function CompanyDetails() {
         <h2>Технологии:</h2>
         <List>
           {exp.techonologies.map((it, idx) => (
-            <li key={idx}>{it}</li>
+            <li key={idx}>- {it}</li>
           ))}
         </List>
       </Content>

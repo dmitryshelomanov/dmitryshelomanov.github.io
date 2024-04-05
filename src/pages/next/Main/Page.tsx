@@ -128,6 +128,14 @@ export function MainPage() {
         </a>
       </Socials>
 
+      <a
+        href="https://hh.ru/resume/69d46fb4ff03a1e96e0039ed1f3978684e6571"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Посмотреть PDF вариант
+      </a>
+
       <List>
         <img
           alt="skills"
