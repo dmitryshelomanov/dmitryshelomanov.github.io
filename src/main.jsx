@@ -1,15 +1,51 @@
 import React from "react";
+import styled from "styled-components";
 import ReactDOM from "react-dom/client";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
 import "./ui/customize.less";
 import { MainPage } from "./pages/next/Main";
 import { CompanyDetails } from "./pages/next/CompanyDetails";
 
+const Page = styled.section`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 3rem;
+
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .skills {
+    max-width: 100%;
+  }
+`;
+
+const Footer = styled.footer`
+  opacity: 0.5;
+  margin-top: auto;
+`;
+
+function Template() {
+  return (
+    <Page>
+      <Outlet />
+      <Footer>2017-{new Date().getFullYear()} © dmitryshelomanov</Footer>
+    </Page>
+  );
+}
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <HashRouter>
     <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route path="/:company" element={<CompanyDetails />} />
+      <Route element={<Template />}>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/:company" element={<CompanyDetails />} />
+      </Route>
     </Routes>
   </HashRouter>
 );

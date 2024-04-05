@@ -5,25 +5,6 @@ import { Hero } from "../../../ui/atoms";
 import { Link, useParams } from "react-router-dom";
 import { expirience } from "./expiriense";
 
-const Page = styled.section`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 3rem;
-
-  video {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .skills {
-    max-width: 100%;
-  }
-`;
-
 const List = styled.ul`
   display: flex;
   flex-direction: column;
@@ -69,18 +50,18 @@ export function CompanyDetails() {
 
   if (!exp) {
     return (
-      <Page>
+      <>
         <Hero>
           <span data-content="404">404</span>
         </Hero>
 
         <Link to="/">На главную</Link>
-      </Page>
+      </>
     );
   }
 
   return (
-    <Page>
+    <>
       <Link to="/">
         <BackArrow src="/back-arrow.svg" alt="back" />
       </Link>
@@ -99,7 +80,7 @@ export function CompanyDetails() {
               {exp.projects.map((it, idx) => (
                 <li key={idx}>
                   <a href={it.link} target="_blank" rel="noreferrer">
-                    - {it.title}
+                    {it.title}
                   </a>
                 </li>
               ))}
@@ -122,7 +103,7 @@ export function CompanyDetails() {
             return (
               <List>
                 {it.payload.map((it, idx) => (
-                  <li key={`${idx}/list`}>- {it}</li>
+                  <li key={`${idx}/list`}>{it}</li>
                 ))}
               </List>
             );
@@ -135,7 +116,7 @@ export function CompanyDetails() {
 
             <List>
               {exp.achievements.map((it, idx) => (
-                <li key={idx}>- {it}</li>
+                <li key={idx}>{it}</li>
               ))}
             </List>
           </>
@@ -144,10 +125,10 @@ export function CompanyDetails() {
         <h2>Технологии:</h2>
         <List>
           {exp.techonologies.map((it, idx) => (
-            <li key={idx}>- {it}</li>
+            <li key={idx}>{it}</li>
           ))}
         </List>
       </Content>
-    </Page>
+    </>
   );
 }
