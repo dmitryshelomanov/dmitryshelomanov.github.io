@@ -72,7 +72,7 @@ export function MainPage() {
   return (
     <>
       <Hero>
-        Привет<i>!</i>
+        Приветствую<i>!</i>
         <br />Я Дмитрий.
       </Hero>
 
@@ -114,7 +114,7 @@ export function MainPage() {
         target="_blank"
         rel="noreferrer"
       >
-        Посмотреть PDF вариант
+        Ссылка на hh.ru
       </a>
 
       <List>

@@ -70,7 +70,7 @@ export function CompanyDetails() {
       </Hero>
 
       <Content>
-        <p>- {exp.position}</p>
+        <p>— {exp.position}</p>
 
         {exp.projects.length > 0 && (
           <>
@@ -103,7 +103,7 @@ export function CompanyDetails() {
             return (
               <List>
                 {it.payload.map((it, idx) => (
-                  <li key={`${idx}/list`}>{it}</li>
+                  <li key={`${idx}/list`}>— {it}</li>
                 ))}
               </List>
             );
@@ -116,7 +116,7 @@ export function CompanyDetails() {
 
             <List>
               {exp.achievements.map((it, idx) => (
-                <li key={idx}>{it}</li>
+                <li key={idx}>— {it}</li>
               ))}
             </List>
           </>
