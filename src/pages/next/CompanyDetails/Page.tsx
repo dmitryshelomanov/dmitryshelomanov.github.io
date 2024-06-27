@@ -12,9 +12,15 @@ const List = styled.ul`
   padding: 0px;
   margin-top: 8px;
   gap: 12px;
+  padding-left: 8px;
+  margin-bottom: 12px;
 
   li {
     list-style: none;
+
+    p {
+      margin-bottom: 0px;
+    }
   }
 
   h2 {
@@ -26,6 +32,11 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  p {
+    margin: 0;
+    margin-bottom: 8px;
+  }
 `;
 
 const Mark = styled.h4`
@@ -103,7 +114,9 @@ export function CompanyDetails() {
             return (
               <List>
                 {it.payload.map((it, idx) => (
-                  <li key={`${idx}/list`}>— {it}</li>
+                  <li key={`${idx}/list`}>
+                    <p>— {it}</p>
+                  </li>
                 ))}
               </List>
             );
@@ -116,16 +129,20 @@ export function CompanyDetails() {
 
             <List>
               {exp.achievements.map((it, idx) => (
-                <li key={idx}>— {it}</li>
+                <li key={idx}>
+                  <p>— {it}</p>
+                </li>
               ))}
             </List>
           </>
         )}
 
-        <h2>Технологии:</h2>
+        <h2>Используемые технологии:</h2>
         <List>
           {exp.techonologies.map((it, idx) => (
-            <li key={idx}>{it}</li>
+            <li key={idx}>
+              <p>{it}</p>
+            </li>
           ))}
         </List>
       </Content>
