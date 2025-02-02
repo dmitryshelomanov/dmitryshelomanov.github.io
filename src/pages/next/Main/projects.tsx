@@ -1,68 +1,40 @@
-import React from "react";
+const BASE_URL =
+  "https://via.assets.so/img.jpg?w=150&h=150&tc=white&t={t}&bg=rgb(102, 102, 102)";
 
 export const projects = [
   {
+    logo: BASE_URL.replace("{t}", "P"),
     title: "Parser GUI",
-    link: "https://dmitryshelomanov.github.io/parser-gui/",
-    text: (
-      <>
-        Попытка сделать интерактивный парсинг сайтов. Планировалось в итоге
-        отдавать код с помощью кодгена для Puppeter
-      </>
-    ),
-    img: "/parser.jpeg",
+    link: "/p/parser",
   },
   {
+    logo: "logo/snakeAILogo.png",
     title: "Snake AI",
-    link: "https://dmitryshelomanov.github.io/snake/",
-    text: (
-      <>
-        Демо алгоритмов поиска в&nbsp;визуальной игре змейка. Использованы
-        алгоритмы такие как: A*, BFS, DFS
-      </>
-    ),
-    img: "/snake.jpeg",
+    link: "/p/snake/",
   },
   {
+    logo: "logo/gameOfLiveLogo.png",
     title: "Game of Live",
-    link: "https://dmitryshelomanov.github.io/reason-game-of-life/",
-    text: <>Классическая игра Жизнь на&nbsp;ReasonJS</>,
-    img: "/gameOfLive.jpeg",
+    link: "/p/gameOfLive",
   },
   {
+    logo: "logo/hanoiLogo.png",
     title: "Towers of Hanoi",
-    link: "https://dmitryshelomanov.github.io/tower_of_hanoi/",
-    text: (
-      <>Классическая загадка с&nbsp;возможностью просмотра решения (алгоритм)</>
-    ),
-    img: "/towers.jpeg",
+    link: "/p/towers",
   },
   {
+    logo: "logo/mobitvaLogo.png",
     title: "Мобитва next",
-    link: "https://mobilefight.github.io/mobile-fight/",
-    text: (
-      <>
-        Попытка воссоздать старую текстовую онлайн игру мобитва (Квесты, чат,
-        бои 1 на 1 и множественные).
-      </>
-    ),
-    img: "/mobilefight.jpeg",
+    link: "/p/mobilefight",
   },
   {
+    logo: "logo/playerLogo.png",
     title: "Музыкальный плеер",
-    link: "https://dmitryshelomanov.github.io/music-player",
-    text: <>Простой музыкальный плеер с&nbsp;визуализацией</>,
-    img: "/muscplayer.jpeg",
+    link: "/p/player",
   },
   {
+    logo: BASE_URL.replace("{t}", "E"),
     title: "PHP engine",
-    link: "https://github.com/dmitryshelomanov/Engine",
-    text: (
-      <>
-        В колледже пока обучался написал проект напоминающий Laravel, который
-        помогает быстро сделать какой то прототип с бекендом на php
-      </>
-    ),
-    img: "/engine.jpeg",
+    link: "/p/engine",
   },
 ];

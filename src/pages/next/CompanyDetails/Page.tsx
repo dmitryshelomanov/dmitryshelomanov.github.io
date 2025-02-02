@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "../../../ui/customize.less";
 import { Hero } from "../../../ui/atoms";
 import { Link, useParams } from "react-router-dom";
-import { expirience } from "./expiriense";
+import { experience } from "./experience";
 
 const List = styled.ul`
   display: flex;
@@ -53,7 +53,7 @@ const BackArrow = styled.img`
 export function CompanyDetails() {
   const { company } = useParams();
 
-  const exp = expirience[company!];
+  const exp = experience[company!];
 
   useLayoutEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -139,7 +139,7 @@ export function CompanyDetails() {
 
         <h2>Используемые технологии:</h2>
         <List>
-          {exp.techonologies.map((it, idx) => (
+          {exp.technologies.map((it, idx) => (
             <li key={idx}>
               <p>{it}</p>
             </li>

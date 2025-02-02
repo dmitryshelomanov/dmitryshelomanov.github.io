@@ -18,5 +18,5 @@ export function plural(forms: string[], n: string | number) {
   return forms[idx] || "";
 }
 
-export const expiriencePlural = (diff: number) =>
+export const experiencePlural = (diff: number) =>
   `${diff} ${plural(["год", "года", "лет"], diff)}`;

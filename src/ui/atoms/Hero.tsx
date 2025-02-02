@@ -5,13 +5,13 @@ export const Hero = styled.h1`
   margin-top: 32px;
   font-size: 36px;
   white-space: pre;
-  --hero-offset: 0.15em;
+  /* --hero-offset: 0.15em; */
 
   ${desktop(css`
     font-size: 82px;
   `)}
 
-  span {
+  /* span {
     position: relative;
     cursor: default;
     display: inline-block;
@@ -53,6 +53,6 @@ export const Hero = styled.h1`
         transform: translate(var(--hero-offset), var(--hero-offset));
         color: #00ffff;
       }
-    }
+    } */
   }
 `;

@@ -5,6 +5,7 @@ import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
 import "./ui/customize.less";
 import { MainPage } from "./pages/next/Main";
 import { CompanyDetails } from "./pages/next/CompanyDetails";
+import { ProjectDetails } from "./pages/next/ProjectDetails";
 
 const Page = styled.section`
   width: 100%;
@@ -44,7 +45,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Routes>
       <Route element={<Template />}>
         <Route path="/" element={<MainPage />} />
-        <Route path="/:company" element={<CompanyDetails />} />
+        <Route path="/c/:company" element={<CompanyDetails />} />
+        <Route path="/p/:project" element={<ProjectDetails />} />
       </Route>
     </Routes>
   </HashRouter>

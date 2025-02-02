@@ -1,12 +1,11 @@
 import React from "react";
 import dayjs from "dayjs";
 import styled, { css } from "styled-components";
-import { expiriencePlural } from "../../../lib/plural";
-import { desktop } from "../../../ui/responsive";
+import { experiencePlural } from "../../../lib/plural";
 import { Hero } from "../../../ui/atoms";
 import "../../../ui/customize.less";
 import { projects } from "./projects";
-import { expirience, Tag } from "./expirience";
+import { experience, Tag } from "./experience";
 import { articles } from "./artcicles";
 import { Link } from "react-router-dom";
 
@@ -14,17 +13,6 @@ const Description = styled.h4`
   font-size: 21px;
   margin-top: 21px;
   font-weight: 600;
-`;
-
-const AppPreview = styled.img`
-  width: auto;
-  max-width: 320px;
-  cursor: pointer;
-  max-height: 256px;
-
-  ${desktop(css`
-    max-width: 780px;
-  `)}
 `;
 
 const Socials = styled.div`
@@ -58,6 +46,48 @@ const List = styled.ul`
   h2 {
     text-decoration: underline;
   }
+`;
+
+const PostsList = styled(List)<{ variant?: "default" | "small" }>`
+  img {
+    border-radius: 8px;
+    width: 125px;
+    height: 125px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  p {
+    color: #666666;
+  }
+
+  ${(p) =>
+    p.variant === "small" &&
+    css`
+      img {
+        width: 75px;
+        height: 75px;
+      }
+
+      h3 {
+        font-size: 17px;
+      }
+    `}
+`;
+
+const PostRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 `;
 
 const FULL_TIME = Math.ceil(
@@ -110,11 +140,11 @@ export function MainPage() {
       </Socials>
 
       <a
-        href="https://hh.ru/resume/69d46fb4ff03a1e96e0039ed1f3978684e6571"
+        href="https://hh.ru/applicant/resumes/view?resume=69d46fb4ff03a1e96e0039ed1f3978684e6571"
         target="_blank"
         rel="noreferrer"
       >
-        Ссылка на hh.ru
+        Ссылка на PDF вариант
       </a>
 
       <List>
@@ -125,82 +155,63 @@ export function MainPage() {
         />
       </List>
 
-      <List>
+      <PostsList>
         <Hero>
           <span data-content="Карьера">
-            Карьера <Tag>{expiriencePlural(FULL_TIME)}</Tag>
+            Карьера <Tag>{experiencePlural(FULL_TIME)}</Tag>
           </span>
         </Hero>
 
-        {expirience.map((it) => (
+        {experience.map((it) => (
           <li key={it.link}>
-            <h2>
-              <Link to={it.link}>{it.company}</Link>
-            </h2>
-            <p>{it.position}</p>
+            <img src={`/logo/${it.logo}`} />
+            <PostRow>
+              <h3>
+                <Link to={it.link}>{it.company}</Link>
+              </h3>
+              <p>{it.position}</p>
+            </PostRow>
           </li>
         ))}
-      </List>
+      </PostsList>
 
-      <List>
+      <PostsList variant="small">
         <Hero>
           <span data-content="Статьи">Статьи</span>
         </Hero>
 
         {articles.map((it) => (
           <li key={it.link}>
-            <h2>
-              <a href={it.link}>{it.title}</a>
-            </h2>
-            <p>{it.text}</p>
+            <img
+              alt=""
+              src={
+                it.logo.startsWith("http") ? it.logo : `/logo/arts/${it.logo}`
+              }
+            />
+            <PostRow>
+              <h3>
+                <a href={it.link}>{it.title}</a>
+              </h3>
+              <p>{it.text}</p>
+            </PostRow>
           </li>
         ))}
-      </List>
+      </PostsList>
 
-      <List>
+      <PostsList variant="small">
         <Hero>
           <span data-content="Проекты">Проекты</span>
         </Hero>
 
-        <li key="explory">
-          <h2>
-            <a href="#">Explory</a>
-          </h2>
-          <p>
-            С друзьями в свободное от работы время сделали стартап по поиску
-            мероприятий (в целях развития себя как специалистов). Я принимал
-            участие в проекте в роли мобильного разработчика и создавал
-            мобильное приложение на React Native (IOS + Andoid)
-          </p>
-          <AppPreview
-            src="/explory.jpeg"
-            alt="Explory App"
-            onClick={() => {
-              window.open("/explory.jpeg", "_blank");
-            }}
-          />
-        </li>
-
         {projects.map((it) => (
           <li key={it.link}>
-            <h2>
-              <a href={it.link}>{it.title}</a>
-            </h2>
-            <p>{it.text}</p>
-
-            {/* {it.video && <video src={it.video} playsInline loop autoPlay />} */}
-
-            {it.img && (
-              <AppPreview
-                src={it.img}
-                onClick={() => {
-                  window.open(it.link, "_blank");
-                }}
-              />
-            )}
+            <img src={it.logo} alt="" />
+            <h3>
+              <Link to={it.link}>{it.title}</Link>
+            </h3>
           </li>
         ))}
-      </List>
+      </PostsList>
     </>
   );
 }
