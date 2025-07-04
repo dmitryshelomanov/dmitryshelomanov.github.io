@@ -32,6 +32,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  white-space: pre-wrap;
 
   p {
     margin: 0;
@@ -98,6 +99,8 @@ export function CompanyDetails() {
             </List>
           </>
         )}
+
+        {exp.intro && <div>{exp.intro.join("\n\n")}</div>}
 
         <h2>Обязанности:</h2>
 

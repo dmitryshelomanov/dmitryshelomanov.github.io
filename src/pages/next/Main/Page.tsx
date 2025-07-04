@@ -148,11 +148,7 @@ export function MainPage() {
       </a>
 
       <List>
-        <img
-          alt="skills"
-          src="https://skillicons.dev/icons?i=js,ts,html,css,react,nodejs,docker"
-          className="skills"
-        />
+        <img alt="skills" src="/icons/skills.svg" className="skills" />
       </List>
 
       <PostsList>

@@ -27,8 +27,13 @@ const Page = styled.section`
 `;
 
 const Footer = styled.footer`
-  opacity: 0.5;
+  opacity: 0.6;
   margin-top: auto;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1 1 auto;
 `;
 
 function Template() {
