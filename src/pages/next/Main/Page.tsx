@@ -1,13 +1,12 @@
-import React from "react";
 import dayjs from "dayjs";
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 import { experiencePlural } from "../../../lib/plural";
 import { Hero } from "../../../ui/atoms";
 import "../../../ui/customize.less";
 import { projects } from "./projects";
 import { experience, Tag } from "./experience";
 import { articles } from "./artcicles";
-import { Link } from "react-router-dom";
 
 const Description = styled.h4`
   font-size: 21px;

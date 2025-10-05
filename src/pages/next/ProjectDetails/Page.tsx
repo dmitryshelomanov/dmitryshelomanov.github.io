@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import styled, { css } from "styled-components";
 import "../../../ui/customize.less";
@@ -69,7 +69,7 @@ export function ProjectDetails() {
       </Hero>
 
       <Content>
-        <a href={selectedProject.link} target="_blank">
+        <a href={selectedProject.link} target="_blank" rel="noreferrer">
           Посмотреть демо
         </a>
 

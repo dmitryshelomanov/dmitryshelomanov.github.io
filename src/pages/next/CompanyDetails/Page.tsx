@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import styled from "styled-components";
 import "../../../ui/customize.less";
 import { Hero } from "../../../ui/atoms";

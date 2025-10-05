@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import ReactDOM from "react-dom/client";
 import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
@@ -34,6 +33,7 @@ const Footer = styled.footer`
   justify-content: flex-end;
   align-items: center;
   flex: 1 1 auto;
+  max-height: min-content;
 `;
 
 function Template() {

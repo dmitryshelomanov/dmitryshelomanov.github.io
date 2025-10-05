@@ -1,4 +1,3 @@
-import React from "react";
 import dayjs from "dayjs";
 import styled from "styled-components";
 import { experiencePlural } from "../../../lib/plural";
@@ -31,8 +30,9 @@ export const experience = [
     company: "Цум",
     position: (
       <>
-        Senior Frontend Developer / Team lead (Сентябрь&nbsp;2021 — по настоящее
-        время, <Tag>{experiencePlural(LAST_COMPANY_TIME)}</Tag>)
+        Senior Frontend Developer / Team lead&nbsp;
+        (Сентябрь&nbsp;2021&nbsp;—&nbsp;по настоящее время,
+        <Tag>{experiencePlural(LAST_COMPANY_TIME)}</Tag>&nbsp;)
       </>
     ),
   },

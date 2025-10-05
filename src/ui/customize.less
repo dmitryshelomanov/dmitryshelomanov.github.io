@@ -1,11 +1,5 @@
-// @import "antd/lib/style/themes/default.less";
-// @import "antd/dist/antd.less";
 @import "../../node_modules/modern-normalize/modern-normalize.css";
-@import "./overides/varriables.less";
-// @import "./overides/input.less";
-// @import "./overides/menu.less";
-// @import "./overides/notification.less";
-// @import "react-simple-keyboard/build/css/index.css";
+@import "./overrides/variables.less";
 
 html,
 body {
@@ -45,9 +39,7 @@ a {
 
 body {
   padding: 1rem;
-  // font-family: var(--font-family-body);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: var(--font-family-body);
   background-color: transparent;
 
   @media (min-width: 1024px) {
@@ -60,25 +52,19 @@ body {
   min-height: 100%;
 }
 
-// .ant-input-suffix {
-//   transition: all @animation-duration-base @ease-in-out;
-// }
-
 h1,
 h2,
 h3,
 h4 {
   margin: 0px;
   line-height: 1.2;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
   a {
     color: inherit;
   }
 
   &:not(h4) {
-    // font-family: var(--font-family-heading);
+    font-family: var(--font-family-heading);
   }
 }
 
