@@ -12,7 +12,7 @@ export const articles = [
     text: <>Подробнее про навигацию в РН и создание кастомных анимаций</>,
   },
   {
-    logo: "https://via.assets.so/img.jpg?w=150&h=150&tc=white&t=Snake&bg=rgb(102, 102, 102)",
+    logo: "/image-placeholder.png",
     title: "Snake AI",
     link: "https://dmitryshelomanov.medium.com/snake-ai-7cb6d55c1b4e",
     text: (

@@ -1,14 +1,4 @@
-import dayjs from "dayjs";
 import styled from "styled-components";
-import { experiencePlural } from "../../../lib/plural";
-
-const LAST_COMPANY_TIME = Math.floor(
-  dayjs(Date.now()).diff(
-    dayjs().set("date", 1).set("month", 8).set("year", 2021),
-    "year",
-    true
-  )
-);
 
 export const Tag = styled.div`
   background: #0000ff;
@@ -31,8 +21,7 @@ export const experience = [
     position: (
       <>
         Senior Frontend Developer / Team lead&nbsp;
-        (Сентябрь&nbsp;2021&nbsp;—&nbsp;по настоящее время,
-        <Tag>{experiencePlural(LAST_COMPANY_TIME)}</Tag>&nbsp;)
+        (Сентябрь&nbsp;2021&nbsp;—&nbsp;по настоящее время)
       </>
     ),
   },
@@ -40,55 +29,32 @@ export const experience = [
     logo: "explory.png",
     link: "/c/explory",
     company: `Explory`,
-    position: (
-      <>
-        React Native Developer (Июль&nbsp;2020 — Июль&nbsp;2021,{" "}
-        <Tag>1&nbsp;год</Tag>)
-      </>
-    ),
+    position: <>React Native Developer (Июль&nbsp;2020 — Июль&nbsp;2021)</>,
   },
   {
     logo: "olimp.png",
     link: "/c/olimp",
     company: "БК «Олимп»",
     position: (
-      <>
-        Senior Frontend Developer (Июнь&nbsp;2020 — Сентябрь&nbsp;2021,{" "}
-        <Tag>1 год 2 месяца</Tag>)
-      </>
+      <>Senior Frontend Developer (Июнь&nbsp;2020 — Сентябрь&nbsp;2021)</>
     ),
   },
   {
     logo: "dialog.png",
     link: "/c/dialog",
     company: "Dialog Messenger",
-    position: (
-      <>
-        Senior Frontend Developer (Май&nbsp;2019 — Август&nbsp;2020,{" "}
-        <Tag>1 год 4 месяца</Tag>)
-      </>
-    ),
+    position: <>Senior Frontend Developer (Май&nbsp;2019 — Август&nbsp;2020)</>,
   },
   {
     logo: "unitemp.png",
     link: "/c/unitemp",
     company: "Unitemp",
-    position: (
-      <>
-        Веб разработчик (Февраль&nbsp;2018 — Май&nbsp;2019,{" "}
-        <Tag>1 год 3 месяца</Tag>)
-      </>
-    ),
+    position: <>Веб разработчик (Февраль&nbsp;2018 — Май&nbsp;2019)</>,
   },
   {
     logo: "idea.png",
     link: "/c/idea",
     company: `Мир Идей`,
-    position: (
-      <>
-        Web developer (Июль&nbsp;2017 — Февраль&nbsp;2018,{" "}
-        <Tag>8&nbsp;месяцев</Tag>)
-      </>
-    ),
+    position: <>Web developer (Июль&nbsp;2017 — Февраль&nbsp;2018)</>,
   },
 ];

@@ -1,12 +1,11 @@
-import dayjs from "dayjs";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
-import { experiencePlural } from "../../../lib/plural";
 import { Hero } from "../../../ui/atoms";
-import "../../../ui/customize.less";
 import { projects } from "./projects";
-import { experience, Tag } from "./experience";
+import { experience } from "./experience";
 import { articles } from "./artcicles";
+import { desktop } from "../../../ui/responsive";
+import "../../../ui/customize.less";
 
 const Description = styled.h4`
   font-size: 21px;
@@ -47,11 +46,22 @@ const List = styled.ul`
   }
 `;
 
-const PostsList = styled(List)<{ variant?: "default" | "small" }>`
+const PostsList = styled(List)<{
+  variant?: "default" | "small";
+  grid?: boolean;
+}>`
+  width: 100%;
+
   img {
-    border-radius: 8px;
-    width: 125px;
-    height: 125px;
+    border-radius: 6px;
+    width: 65px;
+    height: 65px;
+    align-self: center;
+
+    ${desktop(css`
+      width: 100px;
+      height: 100px;
+    `)}
   }
 
   h3 {
@@ -63,23 +73,42 @@ const PostsList = styled(List)<{ variant?: "default" | "small" }>`
     display: flex;
     gap: 16px;
     align-items: flex-start;
+    padding: 16px;
+    border: 2px solid var(--list-border-color);
+    border-radius: 6px;
+    background-color: var(--list-bg);
   }
 
   p {
-    color: #666666;
+    color: var(--list-font-color);
   }
 
   ${(p) =>
     p.variant === "small" &&
     css`
       img {
-        width: 75px;
-        height: 75px;
+        width: 65px;
+        height: 65px;
       }
 
       h3 {
         font-size: 17px;
       }
+    `}
+
+  ${(p) =>
+    p.grid &&
+    css`
+      display: grid;
+      grid-template-columns: 1fr;
+
+      h1 {
+        grid-column: 1/-1;
+      }
+
+      ${desktop(css`
+        grid-template-columns: repeat(3, 1fr);
+      `)}
     `}
 `;
 
@@ -88,14 +117,6 @@ const PostRow = styled.div`
   flex-direction: column;
   gap: 8px;
 `;
-
-const FULL_TIME = Math.ceil(
-  dayjs(Date.now()).diff(
-    dayjs().set("date", 1).set("month", 6).set("year", 2017),
-    "year",
-    true
-  )
-);
 
 export function MainPage() {
   return (
@@ -152,14 +173,12 @@ export function MainPage() {
 
       <PostsList>
         <Hero>
-          <span data-content="Карьера">
-            Карьера <Tag>{experiencePlural(FULL_TIME)}</Tag>
-          </span>
+          <span data-content="Карьера">Карьера</span>
         </Hero>
 
         {experience.map((it) => (
           <li key={it.link}>
-            <img src={`/logo/${it.logo}`} />
+            <img src={`/logo/${it.logo}`} alt={it.company} />
             <PostRow>
               <h3>
                 <Link to={it.link}>{it.company}</Link>
@@ -193,7 +212,7 @@ export function MainPage() {
         ))}
       </PostsList>
 
-      <PostsList variant="small">
+      <PostsList variant="small" grid>
         <Hero>
           <span data-content="Проекты">Проекты</span>
         </Hero>

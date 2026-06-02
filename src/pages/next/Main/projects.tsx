@@ -1,9 +1,6 @@
-const BASE_URL =
-  "https://via.assets.so/img.jpg?w=150&h=150&tc=white&t={t}&bg=rgb(102, 102, 102)";
-
 export const projects = [
   {
-    logo: BASE_URL.replace("{t}", "P"),
+    logo: "/logo/arts/image-placeholder.png",
     title: "Parser GUI",
     link: "/p/parser",
   },
@@ -33,7 +30,7 @@ export const projects = [
     link: "/p/player",
   },
   {
-    logo: BASE_URL.replace("{t}", "E"),
+    logo: "/logo/arts/image-placeholder.png",
     title: "PHP engine",
     link: "/p/engine",
   },

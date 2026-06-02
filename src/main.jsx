@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import ReactDOM from "react-dom/client";
 import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
-import "./ui/customize.less";
 import { MainPage } from "./pages/next/Main";
 import { CompanyDetails } from "./pages/next/CompanyDetails";
 import { ProjectDetails } from "./pages/next/ProjectDetails";
+import "./ui/customize.less";
 
 const Page = styled.section`
   width: 100%;
@@ -30,7 +30,7 @@ const Footer = styled.footer`
   margin-top: auto;
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   flex: 1 1 auto;
   max-height: min-content;
