@@ -1,0 +1,86 @@
+@import "modern-normalize/modern-normalize.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-body-bg: #f8f8f8;
+    --color-list-bg: #f2f2f2;
+    --color-list-border: #dcdcdc;
+    --color-list-font: #2c2c2c;
+    --color-accent: #5d5d5d;
+    --color-link: #007acc;
+  }
+
+  .dark {
+    --color-body-bg: #141414;
+    --color-list-bg: #1e1e1e;
+    --color-list-border: #333333;
+    --color-list-font: #e8e8e8;
+    --color-accent: #a0a0a0;
+    --color-link: #58a6ff;
+  }
+
+  html,
+  body {
+    @apply overflow-x-hidden scroll-smooth antialiased mx-auto bg-body-bg min-h-screen flex text-list-font;
+  }
+
+  body {
+    @apply w-full max-w-[960px] mx-auto p-4 lg:px-16 lg:py-8 font-body bg-transparent;
+  }
+
+  #root {
+    @apply w-full min-h-full;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply m-0 leading-tight;
+  }
+
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a {
+    @apply text-inherit;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-heading;
+  }
+
+  h2 {
+    @apply font-bold;
+  }
+
+  p,
+  h1,
+  h3 {
+    @apply text-list-font;
+  }
+
+  a {
+    @apply text-link;
+  }
+
+  ul {
+    @apply m-0 p-0;
+  }
+
+  p {
+    @apply leading-normal break-words hyphens-auto text-base;
+  }
+}
+
+@layer components {
+  .icon-adaptive {
+    @apply dark:brightness-0 dark:invert;
+  }
+}

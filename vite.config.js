@@ -13,11 +13,4 @@ export default defineConfig({
     }),
     eslint(),
   ],
-  css: {
-    preprocessorOptions: {
-      less: {
-        javascriptEnabled: true,
-      },
-    },
-  },
 });

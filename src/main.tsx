@@ -1,47 +1,21 @@
-import styled from "styled-components";
 import { createRoot } from "react-dom/client";
 import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
 import { MainPage } from "./pages/next/Main";
 import { CompanyDetails } from "./pages/next/CompanyDetails";
 import { ProjectDetails } from "./pages/next/ProjectDetails";
-import "./ui/customize.less";
-
-const Page = styled.section`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 3rem;
-
-  video {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .skills {
-    max-width: 100%;
-  }
-`;
-
-const Footer = styled.footer`
-  opacity: 0.6;
-  margin-top: auto;
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-  flex: 1 1 auto;
-  max-height: min-content;
-`;
+import { ThemeProvider } from "./lib/ThemeProvider";
+import { ThemeToggle } from "./ui/atoms/ThemeToggle";
+import "./index.css";
 
 function Template() {
   return (
-    <Page>
+    <section className="flex w-full h-full flex-col items-start gap-2 mb-12 [&_video]:max-w-full [&_video]:h-auto [&_.skills]:max-w-full">
+      <ThemeToggle />
       <Outlet />
-      <Footer>2017-{new Date().getFullYear()} © dmitryshelomanov</Footer>
-    </Page>
+      <footer className="opacity-60 mt-auto flex w-full justify-start items-center flex-auto max-h-min">
+        2017-{new Date().getFullYear()} © dmitryshelomanov
+      </footer>
+    </section>
   );
 }
 
@@ -52,13 +26,15 @@ if (!root) {
 }
 
 createRoot(root).render(
-  <HashRouter>
-    <Routes>
-      <Route element={<Template />}>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/c/:company" element={<CompanyDetails />} />
-        <Route path="/p/:project" element={<ProjectDetails />} />
-      </Route>
-    </Routes>
-  </HashRouter>
+  <ThemeProvider>
+    <HashRouter>
+      <Routes>
+        <Route element={<Template />}>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/c/:company" element={<CompanyDetails />} />
+          <Route path="/p/:project" element={<ProjectDetails />} />
+        </Route>
+      </Routes>
+    </HashRouter>
+  </ThemeProvider>
 );

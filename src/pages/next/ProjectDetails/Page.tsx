@@ -1,40 +1,7 @@
 import { useLayoutEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import styled, { css } from "styled-components";
-import "../../../ui/customize.less";
 import { Hero } from "../../../ui/atoms";
-import { desktop } from "../../../ui/responsive";
 import { projects } from "./projects";
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-
-  p {
-    margin: 0;
-    margin-bottom: 8px;
-  }
-`;
-
-const BackArrow = styled.img`
-  transform: rotate(180deg);
-  width: 24px;
-  height: 24px;
-`;
-
-const AppPreview = styled.img`
-  width: auto;
-  max-width: 320px;
-  cursor: pointer;
-  max-height: 256px;
-  object-fit: contain;
-  align-self: flex-start;
-
-  ${desktop(css`
-    max-width: 780px;
-  `)}
-`;
 
 export function ProjectDetails() {
   const { project } = useParams();
@@ -60,7 +27,13 @@ export function ProjectDetails() {
   return (
     <>
       <Link to="/">
-        <BackArrow src="/back-arrow.svg" alt="back" width={24} height={24} />
+        <img
+          src="/back-arrow.svg"
+          alt="back"
+          width={24}
+          height={24}
+          className="rotate-180 w-6 h-6 icon-adaptive"
+        />
       </Link>
       <Hero>
         <span data-content={selectedProject.title}>
@@ -68,19 +41,21 @@ export function ProjectDetails() {
         </span>
       </Hero>
 
-      <Content>
+      <div className="flex flex-col gap-8 [&_p]:m-0 [&_p]:mb-2">
         <a href={selectedProject.link} target="_blank" rel="noreferrer">
           Посмотреть демо
         </a>
 
-        <AppPreview
+        <img
           src={selectedProject.img}
           width={selectedProject.width}
           height={selectedProject.height}
+          alt=""
+          className="w-auto max-w-[320px] lg:max-w-[780px] cursor-pointer max-h-64 object-contain self-start"
         />
 
         {selectedProject.text}
-      </Content>
+      </div>
     </>
   );
 }

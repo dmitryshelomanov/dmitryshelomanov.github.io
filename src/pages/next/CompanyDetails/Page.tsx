@@ -1,55 +1,10 @@
 import { useLayoutEffect } from "react";
-import styled from "styled-components";
-import "../../../ui/customize.less";
 import { Hero } from "../../../ui/atoms";
 import { Link, useParams } from "react-router-dom";
 import { experience } from "./experience";
 
-const List = styled.ul`
-  display: flex;
-  flex-direction: column;
-  margin: 0px;
-  padding: 0px;
-  margin-top: 8px;
-  gap: 12px;
-  padding-left: 8px;
-  margin-bottom: 12px;
-
-  li {
-    list-style: none;
-
-    p {
-      margin-bottom: 0px;
-    }
-  }
-
-  h2 {
-    text-decoration: underline;
-  }
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  white-space: pre-wrap;
-
-  p {
-    margin: 0;
-    margin-bottom: 8px;
-  }
-`;
-
-const Mark = styled.h4`
-  margin: 16px 0px;
-  text-decoration: underline;
-`;
-
-const BackArrow = styled.img`
-  transform: rotate(180deg);
-  width: 24px;
-  height: 24px;
-`;
+const listClassName =
+  "flex flex-col m-0 p-0 mt-2 gap-3 pl-2 mb-3 [&_li]:list-none [&_li_p]:mb-0 [&_h2]:underline";
 
 export function CompanyDetails() {
   const { company } = useParams();
@@ -75,20 +30,26 @@ export function CompanyDetails() {
   return (
     <>
       <Link to="/">
-        <BackArrow src="/back-arrow.svg" alt="back" width={24} height={24} />
+        <img
+          src="/back-arrow.svg"
+          alt="back"
+          width={24}
+          height={24}
+          className="rotate-180 w-6 h-6 icon-adaptive"
+        />
       </Link>
       <Hero>
         <span data-content={exp.company}>{exp.company}</span>
       </Hero>
 
-      <Content>
+      <div className="flex flex-col gap-4 whitespace-pre-wrap [&_p]:m-0 [&_p]:mb-2">
         <p>— {exp.position}</p>
 
         {exp.projects.length > 0 && (
           <>
             <h2>Проекты:</h2>
 
-            <List>
+            <ul className={listClassName}>
               {exp.projects.map((it, idx) => (
                 <li key={idx}>
                   <a href={it.link} target="_blank" rel="noreferrer">
@@ -96,7 +57,7 @@ export function CompanyDetails() {
                   </a>
                 </li>
               ))}
-            </List>
+            </ul>
           </>
         )}
 
@@ -111,17 +72,21 @@ export function CompanyDetails() {
             }
 
             if (it.type === "mark") {
-              return <Mark key={idx}>{it.payload}</Mark>;
+              return (
+                <h4 key={idx} className="my-4 underline">
+                  {it.payload}
+                </h4>
+              );
             }
 
             return (
-              <List>
-                {it.payload.map((it, idx) => (
-                  <li key={`${idx}/list`}>
-                    <p>— {it}</p>
+              <ul key={idx} className={listClassName}>
+                {it.payload.map((item, itemIdx) => (
+                  <li key={`${itemIdx}/list`}>
+                    <p>— {item}</p>
                   </li>
                 ))}
-              </List>
+              </ul>
             );
           })}
         </div>
@@ -130,25 +95,25 @@ export function CompanyDetails() {
           <>
             <h2>Достижения:</h2>
 
-            <List>
+            <ul className={listClassName}>
               {exp.achievements.map((it, idx) => (
                 <li key={idx}>
                   <p>— {it}</p>
                 </li>
               ))}
-            </List>
+            </ul>
           </>
         )}
 
         <h2>Используемые технологии:</h2>
-        <List>
+        <ul className={listClassName}>
           {exp.technologies.map((it, idx) => (
             <li key={idx}>
               <p>{it}</p>
             </li>
           ))}
-        </List>
-      </Content>
+        </ul>
+      </div>
     </>
   );
 }

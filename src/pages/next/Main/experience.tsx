@@ -1,18 +1,3 @@
-import styled from "styled-components";
-
-export const Tag = styled.div`
-  background: #0000ff;
-  color: #fff;
-  padding: 1px 8px;
-  border-radius: 8px;
-  font-style: italic;
-  font-size: 12px;
-  margin-left: 4px;
-  cursor: help;
-  display: inline-flex;
-  width: max-content;
-`;
-
 export const experience = [
   {
     logo: "tsum.svg",

@@ -1,12 +1,16 @@
-import styled, { css } from "styled-components";
-import { desktop } from "../responsive";
+import type { ReactNode } from "react";
 
-export const Hero = styled.h1`
-  margin-top: 32px;
-  font-size: 36px;
-  white-space: pre;
+type HeroProps = {
+  children: ReactNode;
+  className?: string;
+};
 
-  ${desktop(css`
-    font-size: 82px;
-  `)}
-`;
+export function Hero({ children, className = "" }: HeroProps) {
+  return (
+    <h1
+      className={`mt-8 text-[36px] lg:text-[82px] whitespace-pre ${className}`}
+    >
+      {children}
+    </h1>
+  );
+}
