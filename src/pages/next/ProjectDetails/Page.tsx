@@ -60,7 +60,7 @@ export function ProjectDetails() {
   return (
     <>
       <Link to="/">
-        <BackArrow src="/back-arrow.svg" alt="back" />
+        <BackArrow src="/back-arrow.svg" alt="back" width={24} height={24} />
       </Link>
       <Hero>
         <span data-content={selectedProject.title}>
@@ -73,7 +73,11 @@ export function ProjectDetails() {
           Посмотреть демо
         </a>
 
-        <AppPreview src={selectedProject.img} />
+        <AppPreview
+          src={selectedProject.img}
+          width={selectedProject.width}
+          height={selectedProject.height}
+        />
 
         {selectedProject.text}
       </Content>

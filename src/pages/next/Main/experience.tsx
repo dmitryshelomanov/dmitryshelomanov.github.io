@@ -16,6 +16,8 @@ export const Tag = styled.div`
 export const experience = [
   {
     logo: "tsum.svg",
+    width: 153,
+    height: 90,
     link: "/c/tsum",
     company: "Цум",
     position: (
@@ -27,12 +29,16 @@ export const experience = [
   },
   {
     logo: "explory.png",
+    width: 358,
+    height: 384,
     link: "/c/explory",
     company: `Explory`,
     position: <>React Native Developer (Июль&nbsp;2020 — Июль&nbsp;2021)</>,
   },
   {
     logo: "olimp.png",
+    width: 300,
+    height: 300,
     link: "/c/olimp",
     company: "БК «Олимп»",
     position: (
@@ -41,18 +47,24 @@ export const experience = [
   },
   {
     logo: "dialog.png",
+    width: 180,
+    height: 180,
     link: "/c/dialog",
     company: "Dialog Messenger",
     position: <>Senior Frontend Developer (Май&nbsp;2019 — Август&nbsp;2020)</>,
   },
   {
     logo: "unitemp.png",
+    width: 512,
+    height: 512,
     link: "/c/unitemp",
     company: "Unitemp",
     position: <>Веб разработчик (Февраль&nbsp;2018 — Май&nbsp;2019)</>,
   },
   {
     logo: "idea.png",
+    width: 700,
+    height: 700,
     link: "/c/idea",
     company: `Мир Идей`,
     position: <>Web developer (Июль&nbsp;2017 — Февраль&nbsp;2018)</>,

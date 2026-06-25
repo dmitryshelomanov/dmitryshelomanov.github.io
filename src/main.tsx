@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import { HashRouter, Outlet, Route, Routes } from "react-router-dom";
 import { MainPage } from "./pages/next/Main";
 import { CompanyDetails } from "./pages/next/CompanyDetails";
@@ -45,7 +45,13 @@ function Template() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const root = document.getElementById("root");
+
+if (!root) {
+  throw new Error("Root element #root not found");
+}
+
+createRoot(root).render(
   <HashRouter>
     <Routes>
       <Route element={<Template />}>

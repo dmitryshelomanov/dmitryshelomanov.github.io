@@ -134,28 +134,28 @@ export function MainPage() {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/icons/vk-svgrepo-com.svg" alt="vk" />
+          <img src="/icons/vk-svgrepo-com.svg" alt="vk" width={800} height={800} />
         </a>
         <a
           href="malito:dmitryshelomanov@mail.ru"
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/icons/mail-ru-svgrepo-com.svg" alt="mail" />
+          <img src="/icons/mail-ru-svgrepo-com.svg" alt="mail" width={800} height={800} />
         </a>
         <a
           href="https://t.me/dmitryshelomanov"
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/icons/telegram-svgrepo-com.svg" alt="TG" />
+          <img src="/icons/telegram-svgrepo-com.svg" alt="TG" width={800} height={800} />
         </a>
         <a
           href="https://github.com/dmitryshelomanov"
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/icons/github-svgrepo-com.svg" alt="guthub" />
+          <img src="/icons/github-svgrepo-com.svg" alt="guthub" width={800} height={800} />
         </a>
       </Socials>
 
@@ -168,7 +168,7 @@ export function MainPage() {
       </a>
 
       <List>
-        <img alt="skills" src="/icons/skills.svg" className="skills" />
+        <img alt="skills" src="/icons/skills.svg" className="skills" width={385.5} height={48} />
       </List>
 
       <PostsList>
@@ -178,7 +178,7 @@ export function MainPage() {
 
         {experience.map((it) => (
           <li key={it.link}>
-            <img src={`/logo/${it.logo}`} alt={it.company} />
+            <img src={`/logo/${it.logo}`} alt={it.company} width={it.width} height={it.height} />
             <PostRow>
               <h3>
                 <Link to={it.link}>{it.company}</Link>
@@ -198,6 +198,8 @@ export function MainPage() {
           <li key={it.link}>
             <img
               alt=""
+              width={it.width}
+              height={it.height}
               src={
                 it.logo.startsWith("http") ? it.logo : `/logo/arts/${it.logo}`
               }
@@ -219,7 +221,7 @@ export function MainPage() {
 
         {projects.map((it) => (
           <li key={it.link}>
-            <img src={it.logo} alt="" />
+            <img src={it.logo} alt="" width={it.width} height={it.height} />
             <h3>
               <Link to={it.link}>{it.title}</Link>
             </h3>

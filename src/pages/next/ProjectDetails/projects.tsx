@@ -1,10 +1,19 @@
 export const projects: Record<
   string,
-  { title: string; link: string; text: JSX.Element; img: string }
+  {
+    title: string;
+    link: string;
+    text: JSX.Element;
+    img: string;
+    width: number;
+    height: number;
+  }
 > = {
   parser: {
     title: "Parser GUI",
     link: "https://dmitryshelomanov.github.io/parser-gui/",
+    width: 4064,
+    height: 2316,
     text: (
       <>
         Позволяет быстро выделять элементы страницы, автоматически генерируя
@@ -18,6 +27,8 @@ export const projects: Record<
   snake: {
     title: "Snake AI",
     link: "https://dmitryshelomanov.github.io/snake/",
+    width: 2116,
+    height: 2240,
     text: (
       <>
         Интерактивная демонстрация работы A*, BFS и DFS на игровом поле.
@@ -30,6 +41,8 @@ export const projects: Record<
   gameOfLive: {
     title: "Game of Live",
     link: "https://dmitryshelomanov.github.io/reason-game-of-life/",
+    width: 1542,
+    height: 1538,
     text: (
       <>
         Игра «Жизнь» Конвея, перенесённая в ReasonML/ReasonJS — чистый,
@@ -42,6 +55,8 @@ export const projects: Record<
   towers: {
     title: "Towers of Hanoi",
     link: "https://dmitryshelomanov.github.io/tower_of_hanoi/",
+    width: 1544,
+    height: 1016,
     text: (
       <>
         Интерактивная демонстрация алгоритма Ханойских башен. Меняйте количество
@@ -54,6 +69,8 @@ export const projects: Record<
   mobilefight: {
     title: "Мобитва next",
     link: "https://mobilefight.github.io/mobile-fight/",
+    width: 776,
+    height: 1686,
     text: (
       <>
         Попытка воссоздать дух классической «Мобитвы» — с квестами, чатом, боями
@@ -66,6 +83,8 @@ export const projects: Record<
   player: {
     title: "Музыкальный плеер",
     link: "https://dmitryshelomanov.github.io/music-player",
+    width: 1278,
+    height: 2076,
     text: (
       <>
         Простой, но живой плеер с аудиовизуализацией — отображает звуковые волны
@@ -78,6 +97,8 @@ export const projects: Record<
   engine: {
     title: "PHP engine",
     link: "https://github.com/dmitryshelomanov/Engine",
+    width: 3082,
+    height: 2102,
     text: (
       <>
         Учебный проект, созданный в колледже: простой, но мощный бэкенд на PHP с

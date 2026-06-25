@@ -75,7 +75,7 @@ export function CompanyDetails() {
   return (
     <>
       <Link to="/">
-        <BackArrow src="/back-arrow.svg" alt="back" />
+        <BackArrow src="/back-arrow.svg" alt="back" width={24} height={24} />
       </Link>
       <Hero>
         <span data-content={exp.company}>{exp.company}</span>
