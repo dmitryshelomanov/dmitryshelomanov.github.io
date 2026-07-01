@@ -1,8 +1,8 @@
 export const projects = [
   {
-    logo: "/logo/arts/image-placeholder.png",
-    width: 300,
-    height: 300,
+    logo: "/logo/parserLogo.svg",
+    width: 256,
+    height: 256,
     title: "Parser GUI",
     link: "/p/parser",
   },
@@ -42,10 +42,17 @@ export const projects = [
     link: "/p/player",
   },
   {
-    logo: "/logo/arts/image-placeholder.png",
-    width: 300,
-    height: 300,
+    logo: "/logo/engineLogo.svg",
+    width: 256,
+    height: 256,
     title: "PHP engine",
     link: "/p/engine",
+  },
+  {
+    logo: "/logo/tasksSolutionsLogo.svg",
+    width: 256,
+    height: 256,
+    title: "Tasks Solutions",
+    link: "/p/tasks-solutions",
   },
 ];

@@ -108,4 +108,18 @@ export const projects: Record<
     ),
     img: "/engine.jpeg",
   },
+  "tasks-solutions": {
+    title: "Tasks Solutions",
+    link: "https://dmitryshelomanov.github.io/tasks-solutions/",
+    width: 300,
+    height: 300,
+    text: (
+      <>
+        Документация по алгоритмам, структурам данных, JavaScript, TypeScript,
+        веб-разработке, React и AI. Материалы для подготовки к собеседованиям,
+        паттерны решения задач и исходный код с тестами.
+      </>
+    ),
+    img: "/logo/tasksSolutionsLogo.svg",
+  },
 };
