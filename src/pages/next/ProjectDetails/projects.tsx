@@ -9,6 +9,20 @@ export const projects: Record<
     height: number;
   }
 > = {
+  pixelkit: {
+    title: "PixelKit",
+    link: "https://dmitryshelomanov.github.io/pixelkit/",
+    width: 988,
+    height: 1024,
+    text: (
+      <>
+        Лёгкий фото-тулкит в браузере: удаление фона, конвертация и сжатие
+        изображений. Инференс через WebGPU/WASM и Transformers.js — обработка
+        локально, файлы не уходят на сервер.
+      </>
+    ),
+    img: "/pixelkit.png",
+  },
   parser: {
     title: "Parser GUI",
     link: "https://dmitryshelomanov.github.io/parser-gui/",

@@ -1,5 +1,12 @@
 export const projects = [
   {
+    logo: "/logo/pixelkitLogo.svg",
+    width: 256,
+    height: 256,
+    title: "PixelKit",
+    link: "/p/pixelkit",
+  },
+  {
     logo: "/logo/parserLogo.svg",
     width: 256,
     height: 256,
