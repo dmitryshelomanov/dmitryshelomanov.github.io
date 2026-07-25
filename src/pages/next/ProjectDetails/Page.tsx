@@ -26,7 +26,7 @@ export function ProjectDetails() {
 
   return (
     <>
-      <Link to="/">
+      <Link to="/" className="chip p-2">
         <img
           src="/back-arrow.svg"
           alt="back"
@@ -42,7 +42,12 @@ export function ProjectDetails() {
       </Hero>
 
       <div className="flex flex-col gap-8 [&_p]:m-0 [&_p]:mb-2">
-        <a href={selectedProject.link} target="_blank" rel="noreferrer">
+        <a
+          href={selectedProject.link}
+          target="_blank"
+          rel="noreferrer"
+          className="link-btn w-fit"
+        >
           Посмотреть демо
         </a>
 
@@ -51,7 +56,7 @@ export function ProjectDetails() {
           width={selectedProject.width}
           height={selectedProject.height}
           alt=""
-          className="w-auto max-w-[320px] lg:max-w-[780px] cursor-pointer max-h-64 object-contain self-start"
+          className="max-h-64 w-auto max-w-[320px] cursor-pointer self-start rounded-xl border-2 border-list-border bg-list-bg p-2 object-contain lg:max-w-[780px]"
         />
 
         {selectedProject.text}

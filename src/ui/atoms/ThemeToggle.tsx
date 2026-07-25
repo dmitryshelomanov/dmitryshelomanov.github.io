@@ -9,7 +9,7 @@ export function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label={isDark ? "Включить светлую тему" : "Включить тёмную тему"}
-      className="fixed top-4 right-4 z-50 flex h-10 w-10 items-center justify-center rounded-full border-2 border-list-border bg-list-bg text-list-font transition-colors hover:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-link"
+      className="fixed right-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-full border-2 border-list-border bg-list-bg text-list-font transition-all duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:border-accent hover:bg-list-bg-strong hover:shadow-brutal focus:outline-none focus-visible:ring-2 focus-visible:ring-link"
     >
       {isDark ? (
         <svg

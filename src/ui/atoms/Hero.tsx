@@ -8,7 +8,7 @@ type HeroProps = {
 export function Hero({ children, className = "" }: HeroProps) {
   return (
     <h1
-      className={`mt-8 text-[36px] lg:text-[82px] whitespace-pre ${className}`}
+      className={`mt-8 whitespace-pre text-[36px] font-semibold tracking-[-0.02em] lg:text-[82px] ${className}`}
     >
       {children}
     </h1>

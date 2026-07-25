@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { experience } from "./experience";
 
 const listClassName =
-  "flex flex-col m-0 p-0 mt-2 gap-3 pl-2 mb-3 [&_li]:list-none [&_li_p]:mb-0 [&_h2]:underline";
+  "mb-3 mt-2 flex flex-col gap-3 pl-2 [&_li]:list-none [&_li_p]:mb-0";
 
 export function CompanyDetails() {
   const { company } = useParams();
@@ -29,7 +29,7 @@ export function CompanyDetails() {
 
   return (
     <>
-      <Link to="/">
+      <Link to="/" className="chip p-2">
         <img
           src="/back-arrow.svg"
           alt="back"
@@ -42,7 +42,7 @@ export function CompanyDetails() {
         <span data-content={exp.company}>{exp.company}</span>
       </Hero>
 
-      <div className="flex flex-col gap-4 whitespace-pre-wrap [&_p]:m-0 [&_p]:mb-2">
+      <div className="flex flex-col gap-4 whitespace-pre-wrap [&_a]:font-medium [&_a]:text-link [&_a]:underline-offset-2 hover:[&_a]:underline [&_p]:m-0 [&_p]:mb-2">
         <p>— {exp.position}</p>
 
         {exp.projects.length > 0 && (

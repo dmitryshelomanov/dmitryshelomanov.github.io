@@ -1,26 +1,80 @@
 @import "modern-normalize/modern-normalize.css";
 
+@font-face {
+  font-family: "Tungsten-Bold";
+  font-display: swap;
+  src:
+    url("/fonts/tungsten/Tungsten-Bold_Web.woff2") format("woff2"),
+    url("/fonts/tungsten/Tungsten-Bold_Web.woff") format("woff");
+}
+
+@font-face {
+  font-family: "DINNextW05-Bold";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("/fonts/dinnext/DINNextW05-Bold.woff2") format("woff2"),
+    url("/fonts/dinnext/DINNextW05-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "DINNextW05-Medium";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("/fonts/dinnext/DINNextW05-Medium.woff2") format("woff2"),
+    url("/fonts/dinnext/DINNextW05-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-display: swap;
+  src: url("/fonts/notosans/NotoSans-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("/fonts/oswald/Oswald-700.woff2") format("woff2"),
+    url("/fonts/oswald/Oswald-700.woff") format("woff");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --color-body-bg: #f8f8f8;
-    --color-list-bg: #f2f2f2;
-    --color-list-border: #dcdcdc;
-    --color-list-font: #2c2c2c;
-    --color-accent: #5d5d5d;
-    --color-link: #007acc;
+    --color-body-bg: #eceff3;
+    --color-list-bg: #f8f9fb;
+    --color-list-bg-strong: #eef1f5;
+    --color-list-border: #18243d;
+    --color-list-font: #172238;
+    --color-accent: #245dff;
+    --color-link: #245dff;
+    --color-page-grad-1: #ffffff;
+    --color-page-grad-2: #f4f5f8;
+    --color-page-grad-3: #e9edf2;
+    --color-brutal-shadow: 4px 4px 0 #18243d;
   }
 
   .dark {
-    --color-body-bg: #141414;
-    --color-list-bg: #1e1e1e;
-    --color-list-border: #333333;
-    --color-list-font: #e8e8e8;
-    --color-accent: #a0a0a0;
-    --color-link: #58a6ff;
+    --color-body-bg: #0f1727;
+    --color-list-bg: #172338;
+    --color-list-bg-strong: #20304d;
+    --color-list-border: #d8e5ff;
+    --color-list-font: #f1f6ff;
+    --color-accent: #8db2ff;
+    --color-link: #9ec0ff;
+    --color-page-grad-1: #182746;
+    --color-page-grad-2: #1a2e52;
+    --color-page-grad-3: #17345e;
+    --color-brutal-shadow: 4px 4px 0 #d8e5ff;
   }
 
   html,
@@ -29,7 +83,11 @@
   }
 
   body {
-    @apply w-full max-w-[960px] mx-auto p-4 lg:px-16 lg:py-8 font-body bg-transparent;
+    @apply w-full mx-auto p-4 lg:px-16 lg:py-8 font-body bg-transparent relative;
+    background-image:
+      radial-gradient(circle at 10% 10%, var(--color-page-grad-1), transparent 45%),
+      radial-gradient(circle at 85% 18%, var(--color-page-grad-2), transparent 35%),
+      radial-gradient(circle at 78% 85%, var(--color-page-grad-3), transparent 42%);
   }
 
   #root {
@@ -82,5 +140,54 @@
 @layer components {
   .icon-adaptive {
     @apply dark:brightness-0 dark:invert;
+  }
+
+  .card {
+    @apply rounded-2xl border-2 border-list-border bg-list-bg;
+  }
+
+  .card-hover {
+    @apply transition-all duration-150;
+  }
+
+  .card-hover:hover {
+    background-color: var(--color-list-bg-strong);
+    border-color: var(--color-accent);
+    box-shadow: var(--color-brutal-shadow);
+    transform: translate(-2px, -2px);
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-xl border-2 border-list-border bg-list-bg px-3 py-3 text-list-font transition-all duration-150;
+  }
+
+  .chip:hover {
+    border-color: var(--color-accent);
+    background-color: var(--color-list-bg-strong);
+    box-shadow: var(--color-brutal-shadow);
+    transform: translate(-2px, -2px);
+  }
+
+  .link-btn {
+    @apply inline-flex items-center gap-2 rounded-xl border-2 border-list-border bg-list-bg px-4 py-2 font-medium text-link transition-all duration-150;
+  }
+
+  .link-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background-color: var(--color-list-bg-strong);
+    box-shadow: var(--color-brutal-shadow);
+    transform: translate(-2px, -2px);
+  }
+
+  .divider {
+    @apply w-full h-px my-1 opacity-50;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--color-list-border) 18%,
+      var(--color-list-border) 82%,
+      transparent 100%
+    );
   }
 }

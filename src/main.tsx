@@ -9,7 +9,7 @@ import "./index.css";
 
 function Template() {
   return (
-    <section className="flex w-full h-full flex-col items-start gap-2 mb-12 [&_video]:max-w-full [&_video]:h-auto [&_.skills]:max-w-full">
+    <section className="mx-auto mb-12 flex h-full w-full max-w-[960px] flex-col items-start gap-2 [&_video]:h-auto [&_video]:max-w-full [&_.skills]:max-w-full">
       <ThemeToggle />
       <Outlet />
       <footer className="opacity-60 mt-auto flex w-full justify-start items-center flex-auto max-h-min">

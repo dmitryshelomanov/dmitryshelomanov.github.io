@@ -6,7 +6,7 @@ import { experience } from "./experience";
 import { articles } from "./artcicles";
 
 const listClassName =
-  "flex flex-col m-0 p-0 mt-2 gap-[21px] [&_li]:list-none [&_h2]:underline";
+  "flex flex-col m-0 p-0 mt-4 gap-[21px] [&_li]:list-none";
 
 function PostsList({
   variant,
@@ -27,8 +27,9 @@ function PostsList({
         grid
           ? "grid grid-cols-1 lg:grid-cols-3 [&>h1]:col-span-full"
           : "flex flex-col",
-        "[&_li]:flex [&_li]:gap-4 [&_li]:items-start [&_li]:p-4 [&_li]:border-2 [&_li]:border-list-border [&_li]:rounded-md [&_li]:bg-list-bg",
-        "[&_img]:rounded-md [&_img]:self-center",
+        "[&_li]:flex [&_li]:gap-4 [&_li]:items-start [&_li]:p-4 [&_li]:border-2 [&_li]:border-list-border [&_li]:rounded-2xl [&_li]:bg-list-bg [&_li]:transition-all [&_li]:duration-150",
+        "[&_li:hover]:bg-list-bg-strong [&_li:hover]:border-accent [&_li:hover]:-translate-x-0.5 [&_li:hover]:-translate-y-0.5 [&_li:hover]:shadow-brutal",
+        "[&_img]:rounded-xl [&_img]:self-center",
         isSmall
           ? "[&_img]:w-[65px] [&_img]:h-[65px] [&_h3]:text-[17px]"
           : "[&_img]:w-[65px] [&_img]:h-[65px] lg:[&_img]:w-[100px] lg:[&_img]:h-[100px] [&_h3]:text-2xl [&_h3]:font-medium",
@@ -52,7 +53,7 @@ export function MainPage() {
         Занимаюсь фронтенд разработкой в ТД ЦУМ
       </h4>
 
-      <div className="flex flex-row gap-4 mt-[30px] [&_a]:m-0 [&_img]:w-9 [&_img]:h-9 [&_img]:icon-adaptive">
+      <div className="mt-[30px] flex flex-row gap-4 [&_a]:m-0 [&_a]:chip [&_img]:h-9 [&_img]:w-9 [&_img]:icon-adaptive">
         <a
           href="https://vk.com/dmitryshelomanov"
           target="_blank"
@@ -61,7 +62,7 @@ export function MainPage() {
           <img src="/icons/vk-svgrepo-com.svg" alt="vk" width={800} height={800} />
         </a>
         <a
-          href="malito:dmitryshelomanov@mail.ru"
+          href="mailto:dmitryshelomanov@mail.ru"
           target="_blank"
           rel="noreferrer"
         >
@@ -79,7 +80,7 @@ export function MainPage() {
           target="_blank"
           rel="noreferrer"
         >
-          <img src="/icons/github-svgrepo-com.svg" alt="guthub" width={800} height={800} />
+          <img src="/icons/github-svgrepo-com.svg" alt="github" width={800} height={800} />
         </a>
       </div>
 
@@ -87,11 +88,12 @@ export function MainPage() {
         href="https://hh.ru/applicant/resumes/view?resume=69d46fb4ff03a1e96e0039ed1f3978684e6571"
         target="_blank"
         rel="noreferrer"
+        className="link-btn mt-1"
       >
         Ссылка на PDF вариант
       </a>
 
-      <ul className={listClassName}>
+      <ul className={`${listClassName} card p-4`}>
         <img
           alt="skills"
           src="/icons/skills.svg"
