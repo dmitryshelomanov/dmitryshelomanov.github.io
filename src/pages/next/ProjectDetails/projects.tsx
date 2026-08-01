@@ -9,6 +9,49 @@ export const projects: Record<
     height: number;
   }
 > = {
+  iris: {
+    title: "Iris",
+    link: "https://dmitryshelomanov.github.io/iris/",
+    width: 1290,
+    height: 2796,
+    text: (
+      <>
+        Pro-камера для iOS и Android: мульти-линзы, ручные ISO/shutter/WB/focus,
+        assist-оверлеи и film-looks, которые впекаются в файл нативно. Expo Dev
+        Client, Vision Camera и свой native-модуль look-bake — обработка на
+        устройстве.
+      </>
+    ),
+    images: [
+      "/iris/01-cover.png",
+      "/iris/02-camera.png",
+      "/iris/03-gallery.png",
+      "/iris/04-photo.png",
+      "/iris/05-settings.png",
+      "/iris/06-looks.png",
+    ],
+  },
+  lenswire: {
+    title: "Lenswire",
+    link: "https://dmitryshelomanov.github.io/lenswire/",
+    width: 1290,
+    height: 2796,
+    text: (
+      <>
+        On-device HTTP(S) inspector с локальным MITM: захват трафика через VPN
+        (Packet Tunnel / VpnService), расшифровка HTTPS, фильтры, mock и rewrite
+        — без десктопного прокси. Expo и свой native proxy-модуль.
+      </>
+    ),
+    images: [
+      "/lenswire/01-cover.png",
+      "/lenswire/02-traffic.png",
+      "/lenswire/03-domain.png",
+      "/lenswire/04-request.png",
+      "/lenswire/05-response.png",
+      "/lenswire/06-overrides.png",
+    ],
+  },
   pixelkit: {
     title: "PixelKit",
     link: "https://dmitryshelomanov.github.io/pixelkit/",

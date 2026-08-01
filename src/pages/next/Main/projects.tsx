@@ -1,5 +1,19 @@
 export const projects = [
   {
+    logo: "/logo/irisLogo.png",
+    width: 1024,
+    height: 1024,
+    title: "Iris",
+    link: "/p/iris",
+  },
+  {
+    logo: "/logo/lenswireLogo.png",
+    width: 1024,
+    height: 1024,
+    title: "Lenswire",
+    link: "/p/lenswire",
+  },
+  {
     logo: "/logo/pixelkitLogo.svg",
     width: 256,
     height: 256,
