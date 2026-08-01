@@ -4,6 +4,7 @@ export const projects = [
     width: 1024,
     height: 1024,
     title: "Iris",
+    description: "Pro-камера с manual controls и native look-bake",
     link: "/p/iris",
   },
   {
@@ -11,6 +12,7 @@ export const projects = [
     width: 1024,
     height: 1024,
     title: "Lenswire",
+    description: "On-device HTTP(S) inspector с локальным MITM",
     link: "/p/lenswire",
   },
   {
@@ -18,14 +20,15 @@ export const projects = [
     width: 256,
     height: 256,
     title: "PixelKit",
+    description: "Фото-тулкит в браузере: фон, конвертация, сжатие",
     link: "/p/pixelkit",
   },
-
   {
     logo: "/logo/parserLogo.svg",
     width: 256,
     height: 256,
     title: "Parser GUI",
+    description: "Генератор селекторов и кода для Puppeteer",
     link: "/p/parser",
   },
   {
@@ -33,6 +36,7 @@ export const projects = [
     width: 422,
     height: 422,
     title: "Snake AI",
+    description: "Визуализация A*, BFS и DFS на игровом поле",
     link: "/p/snake/",
   },
   {
@@ -40,6 +44,7 @@ export const projects = [
     width: 500,
     height: 494,
     title: "Game of Live",
+    description: "Игра «Жизнь» на ReasonML / ReasonJS",
     link: "/p/gameOfLive",
   },
   {
@@ -47,6 +52,7 @@ export const projects = [
     width: 452,
     height: 430,
     title: "Towers of Hanoi",
+    description: "Интерактивная демонстрация рекурсивного алгоритма",
     link: "/p/towers",
   },
   {
@@ -54,6 +60,7 @@ export const projects = [
     width: 964,
     height: 868,
     title: "Мобитва next",
+    description: "Квесты, чат и PvP в духе классической «Мобитвы»",
     link: "/p/mobilefight",
   },
   {
@@ -61,6 +68,7 @@ export const projects = [
     width: 1072,
     height: 1240,
     title: "Музыкальный плеер",
+    description: "Плеер с аудиовизуализацией в реальном времени",
     link: "/p/player",
   },
   {
@@ -68,6 +76,7 @@ export const projects = [
     width: 256,
     height: 256,
     title: "PHP engine",
+    description: "Учебный PHP-бэкенд с маршрутизацией и MVC",
     link: "/p/engine",
   },
   {
@@ -75,6 +84,7 @@ export const projects = [
     width: 256,
     height: 256,
     title: "Tasks Solutions",
+    description: "Алгоритмы, паттерны и подготовка к собеседованиям",
     link: "/p/tasks-solutions",
   },
 ];

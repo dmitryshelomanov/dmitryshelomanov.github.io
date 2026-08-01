@@ -212,9 +212,12 @@ export function MainPage() {
           <li key={it.link}>
             <Card interactive className="flex gap-4 items-start p-4">
               <img src={it.logo} alt="" width={it.width} height={it.height} />
-              <h3>
-                <Link to={it.link}>{it.title}</Link>
-              </h3>
+              <div className="flex flex-col gap-2">
+                <h3>
+                  <Link to={it.link}>{it.title}</Link>
+                </h3>
+                <p className="line-clamp-2">{it.description}</p>
+              </div>
             </Card>
           </li>
         ))}
