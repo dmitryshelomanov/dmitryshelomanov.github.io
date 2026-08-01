@@ -1,6 +1,8 @@
 import { useLayoutEffect } from "react";
-import { Hero } from "../../../ui/atoms";
+import { ArrowLeft } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Hero } from "@/ui/atoms";
 import { experience } from "./experience";
 
 const listClassName =
@@ -22,22 +24,20 @@ export function CompanyDetails() {
           <span data-content="404">404</span>
         </Hero>
 
-        <Link to="/">На главную</Link>
+        <Button asChild variant="link">
+          <Link to="/">На главную</Link>
+        </Button>
       </>
     );
   }
 
   return (
     <>
-      <Link to="/" className="chip p-2">
-        <img
-          src="/back-arrow.svg"
-          alt="back"
-          width={24}
-          height={24}
-          className="rotate-180 w-6 h-6 icon-adaptive"
-        />
-      </Link>
+      <Button asChild variant="outline" size="icon">
+        <Link to="/" aria-label="На главную">
+          <ArrowLeft className="h-5 w-5" />
+        </Link>
+      </Button>
       <Hero>
         <span data-content={exp.company}>{exp.company}</span>
       </Hero>

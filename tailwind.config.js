@@ -10,8 +10,37 @@ export default {
         "list-bg-strong": "var(--color-list-bg-strong)",
         "list-border": "var(--color-list-border)",
         "list-font": "var(--color-list-font)",
-        accent: "var(--color-accent)",
         link: "var(--color-link)",
+        border: "var(--color-list-border)",
+        input: "var(--color-list-border)",
+        ring: "var(--color-link)",
+        background: "var(--color-body-bg)",
+        foreground: "var(--color-list-font)",
+        primary: {
+          DEFAULT: "var(--color-accent)",
+          foreground: "var(--color-primary-foreground)",
+        },
+        secondary: {
+          DEFAULT: "var(--color-list-bg)",
+          foreground: "var(--color-list-font)",
+        },
+        muted: {
+          DEFAULT: "var(--color-list-bg-strong)",
+          foreground: "var(--color-list-font)",
+        },
+        accent: {
+          DEFAULT: "var(--color-accent)",
+          foreground: "var(--color-primary-foreground)",
+        },
+        card: {
+          DEFAULT: "var(--color-list-bg)",
+          foreground: "var(--color-list-font)",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
         brutal: "var(--color-brutal-shadow)",

@@ -6,6 +6,7 @@ export const projects = [
     title: "PixelKit",
     link: "/p/pixelkit",
   },
+
   {
     logo: "/logo/parserLogo.svg",
     width: 256,

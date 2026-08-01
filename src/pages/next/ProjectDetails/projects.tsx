@@ -4,7 +4,7 @@ export const projects: Record<
     title: string;
     link: string;
     text: JSX.Element;
-    img: string;
+    images: string[];
     width: number;
     height: number;
   }
@@ -21,7 +21,7 @@ export const projects: Record<
         локально, файлы не уходят на сервер.
       </>
     ),
-    img: "/pixelkit.png",
+    images: ["/pixelkit.png"],
   },
   parser: {
     title: "Parser GUI",
@@ -36,7 +36,7 @@ export const projects: Record<
         необходимости писать селекторы вручную.
       </>
     ),
-    img: "/parser.jpeg",
+    images: ["/parser.jpeg"],
   },
   snake: {
     title: "Snake AI",
@@ -50,7 +50,7 @@ export const projects: Record<
         поведения в реальном времени.
       </>
     ),
-    img: "/snake.jpeg",
+    images: ["/snake.jpeg"],
   },
   gameOfLive: {
     title: "Game of Live",
@@ -64,7 +64,7 @@ export const projects: Record<
         элегантность Reason при работе с алгоритмами и визуализацией.
       </>
     ),
-    img: "/gameOfLive.jpeg",
+    images: ["/gameOfLive.jpeg"],
   },
   towers: {
     title: "Towers of Hanoi",
@@ -78,7 +78,7 @@ export const projects: Record<
         рекурсивного алгоритма — наглядно, просто и обучающе.
       </>
     ),
-    img: "/towers.jpeg",
+    images: ["/towers.jpeg"],
   },
   mobilefight: {
     title: "Мобитва next",
@@ -92,7 +92,7 @@ export const projects: Record<
         механика. Для тех, кто помнит, и для тех, кто хочет узнать.
       </>
     ),
-    img: "/mobilefight.jpeg",
+    images: ["/mobilefight.jpeg"],
   },
   player: {
     title: "Музыкальный плеер",
@@ -106,7 +106,7 @@ export const projects: Record<
         визуальное сопровождение музыки.
       </>
     ),
-    img: "/player.jpeg",
+    images: ["/player.jpeg"],
   },
   engine: {
     title: "PHP engine",
@@ -120,7 +120,7 @@ export const projects: Record<
         быстрого старта MVP или изучения архитектуры Laravel.
       </>
     ),
-    img: "/engine.jpeg",
+    images: ["/engine.jpeg"],
   },
   "tasks-solutions": {
     title: "Tasks Solutions",
@@ -134,6 +134,6 @@ export const projects: Record<
         паттерны решения задач и исходный код с тестами.
       </>
     ),
-    img: "/logo/tasksSolutionsLogo.svg",
+    images: ["/logo/tasksSolutionsLogo.svg"],
   },
 };

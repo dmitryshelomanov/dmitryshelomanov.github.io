@@ -1,6 +1,9 @@
 import { useLayoutEffect } from "react";
+import { ArrowLeft } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
-import { Hero } from "../../../ui/atoms";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Hero } from "@/ui/atoms";
 import { projects } from "./projects";
 
 export function ProjectDetails() {
@@ -19,45 +22,62 @@ export function ProjectDetails() {
           <span data-content="404">404</span>
         </Hero>
 
-        <Link to="/">На главную</Link>
+        <Button asChild variant="link">
+          <Link to="/">На главную</Link>
+        </Button>
       </>
     );
   }
 
   return (
     <>
-      <Link to="/" className="chip p-2">
-        <img
-          src="/back-arrow.svg"
-          alt="back"
-          width={24}
-          height={24}
-          className="rotate-180 w-6 h-6 icon-adaptive"
-        />
-      </Link>
+      <Button asChild variant="outline" size="icon">
+        <Link to="/" aria-label="На главную">
+          <ArrowLeft className="h-5 w-5" />
+        </Link>
+      </Button>
       <Hero>
         <span data-content={selectedProject.title}>
           {selectedProject.title}
         </span>
       </Hero>
 
-      <div className="flex flex-col gap-8 [&_p]:m-0 [&_p]:mb-2">
-        <a
-          href={selectedProject.link}
-          target="_blank"
-          rel="noreferrer"
-          className="link-btn w-fit"
-        >
-          Посмотреть демо
-        </a>
+      <div className="flex w-full min-w-0 max-w-full flex-col gap-8 [&_p]:m-0 [&_p]:mb-2">
+        <Button asChild variant="default" className="w-fit">
+          <a href={selectedProject.link} target="_blank" rel="noreferrer">
+            Посмотреть демо
+          </a>
+        </Button>
 
-        <img
-          src={selectedProject.img}
-          width={selectedProject.width}
-          height={selectedProject.height}
-          alt=""
-          className="max-h-64 w-auto max-w-[320px] cursor-pointer self-start rounded-xl border-2 border-list-border bg-list-bg p-2 object-contain lg:max-w-[780px]"
-        />
+        <div className="flex w-full min-w-0 max-w-full gap-3 overflow-x-auto overscroll-x-contain touch-pan-x pb-1">
+          {selectedProject.images.map((src) => {
+            const isGallery = selectedProject.images.length > 1;
+
+            return (
+              <Card
+                key={src}
+                className={
+                  isGallery
+                    ? "h-auto w-[160px] shrink-0 p-2 lg:w-[200px]"
+                    : "max-h-64 w-auto max-w-[320px] shrink-0 self-start p-2 lg:max-w-[780px]"
+                }
+              >
+                <img
+                  src={src}
+                  width={selectedProject.width}
+                  height={selectedProject.height}
+                  alt=""
+                  draggable={false}
+                  className={
+                    isGallery
+                      ? "pointer-events-none h-auto w-full object-contain"
+                      : "max-h-60 w-auto object-contain"
+                  }
+                />
+              </Card>
+            );
+          })}
+        </div>
 
         {selectedProject.text}
       </div>
