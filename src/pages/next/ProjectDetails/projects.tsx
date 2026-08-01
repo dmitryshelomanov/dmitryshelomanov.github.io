@@ -23,12 +23,12 @@ export const projects: Record<
       </>
     ),
     images: [
-      "/iris/01-cover.png",
-      "/iris/02-camera.png",
-      "/iris/03-gallery.png",
-      "/iris/04-photo.png",
-      "/iris/05-settings.png",
-      "/iris/06-looks.png",
+      "/iris-screens/01-cover.png",
+      "/iris-screens/02-camera.png",
+      "/iris-screens/03-gallery.png",
+      "/iris-screens/04-photo.png",
+      "/iris-screens/05-settings.png",
+      "/iris-screens/06-looks.png",
     ],
   },
   lenswire: {
@@ -44,12 +44,12 @@ export const projects: Record<
       </>
     ),
     images: [
-      "/lenswire/01-cover.png",
-      "/lenswire/02-traffic.png",
-      "/lenswire/03-domain.png",
-      "/lenswire/04-request.png",
-      "/lenswire/05-response.png",
-      "/lenswire/06-overrides.png",
+      "/lenswire-screens/01-cover.png",
+      "/lenswire-screens/02-traffic.png",
+      "/lenswire-screens/03-domain.png",
+      "/lenswire-screens/04-request.png",
+      "/lenswire-screens/05-response.png",
+      "/lenswire-screens/06-overrides.png",
     ],
   },
   pixelkit: {
