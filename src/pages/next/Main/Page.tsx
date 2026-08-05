@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { RunnerMiniGame } from "@/features/RunnerMiniGame";
 import { Hero } from "@/ui/atoms";
 import { projects } from "./projects";
 import { experience } from "./experience";
@@ -222,6 +223,8 @@ export function MainPage() {
           </li>
         ))}
       </PostsList>
+
+      <RunnerMiniGame />
     </>
   );
 }
