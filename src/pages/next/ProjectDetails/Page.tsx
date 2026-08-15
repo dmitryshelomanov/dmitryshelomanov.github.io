@@ -31,7 +31,7 @@ export function ProjectDetails() {
 
   return (
     <>
-      <Button asChild variant="outline" size="icon">
+      <Button asChild variant="ghost" size="icon">
         <Link to="/" aria-label="На главную">
           <ArrowLeft className="h-5 w-5" />
         </Link>
@@ -43,13 +43,13 @@ export function ProjectDetails() {
       </Hero>
 
       <div className="flex w-full min-w-0 max-w-full flex-col gap-8 [&_p]:m-0 [&_p]:mb-2">
-        <Button asChild variant="default" className="w-fit">
+        <Button asChild variant="default" className="w-full justify-between px-6 text-base sm:w-fit">
           <a href={selectedProject.link} target="_blank" rel="noreferrer">
             Посмотреть демо
           </a>
         </Button>
 
-        <div className="flex w-full min-w-0 max-w-full gap-3 overflow-x-auto overscroll-x-contain touch-pan-x pb-1">
+        <div className="flex w-full min-w-0 max-w-full gap-4 overflow-x-auto overscroll-x-contain touch-pan-x pb-1">
           {selectedProject.images.map((src) => {
             const isGallery = selectedProject.images.length > 1;
 
@@ -58,8 +58,8 @@ export function ProjectDetails() {
                 key={src}
                 className={
                   isGallery
-                    ? "h-auto w-[160px] shrink-0 p-2 lg:w-[200px]"
-                    : "max-h-64 w-auto max-w-[320px] shrink-0 self-start p-2 lg:max-w-[780px]"
+                    ? "h-auto w-[170px] shrink-0 bg-list-bg p-2.5 lg:w-[210px]"
+                    : "w-auto max-w-[360px] shrink-0 self-start bg-list-bg p-2.5 lg:max-w-[780px]"
                 }
               >
                 <img
@@ -70,8 +70,8 @@ export function ProjectDetails() {
                   draggable={false}
                   className={
                     isGallery
-                      ? "pointer-events-none h-auto w-full object-contain"
-                      : "max-h-60 w-auto object-contain"
+                      ? "pointer-events-none h-auto w-full rounded-xl object-contain"
+                      : "max-h-60 w-auto rounded-xl object-contain"
                   }
                 />
               </Card>
@@ -79,7 +79,9 @@ export function ProjectDetails() {
           })}
         </div>
 
-        {selectedProject.text}
+        <Card className="w-full bg-accent-warm/45 p-5 sm:p-6">
+          {selectedProject.text}
+        </Card>
       </div>
     </>
   );

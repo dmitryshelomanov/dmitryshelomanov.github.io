@@ -8,7 +8,7 @@ import { projects } from "./projects";
 import { experience } from "./experience";
 import { articles } from "./artcicles";
 
-const listClassName = "flex flex-col m-0 p-0 mt-4 gap-[21px] [&_li]:list-none";
+const listClassName = "mt-5 flex flex-col gap-4 [&_li]:list-none";
 
 function PostsList({
   variant,
@@ -49,16 +49,16 @@ export function MainPage() {
         <br />Я Дмитрий.
       </Hero>
 
-      <h4 className="text-[21px] mt-[21px] font-semibold">
+      <h4 className="mt-5 text-xl font-semibold tracking-tight">
         Занимаюсь фронтенд разработкой в ТД ЦУМ
       </h4>
 
-      <div className="mt-[30px] flex flex-row gap-4 [&_img]:h-9 [&_img]:w-9 [&_img]:icon-adaptive">
+      <div className="mt-8 flex flex-row flex-wrap gap-3 [&_img]:icon-adaptive">
         <Button
           asChild
           variant="outline"
           size="icon"
-          className="h-auto w-auto p-3"
+          className="h-16 w-16 bg-accent-danger p-0"
         >
           <a
             href="https://vk.com/dmitryshelomanov"
@@ -68,6 +68,7 @@ export function MainPage() {
             <img
               src="/icons/vk-svgrepo-com.svg"
               alt="vk"
+              className="h-8 w-8"
               width={800}
               height={800}
             />
@@ -77,7 +78,7 @@ export function MainPage() {
           asChild
           variant="outline"
           size="icon"
-          className="h-auto w-auto p-3"
+          className="h-16 w-16 bg-accent-success p-0"
         >
           <a
             href="mailto:dmitryshelomanov@mail.ru"
@@ -87,6 +88,7 @@ export function MainPage() {
             <img
               src="/icons/mail-ru-svgrepo-com.svg"
               alt="mail"
+              className="h-8 w-8"
               width={800}
               height={800}
             />
@@ -96,7 +98,7 @@ export function MainPage() {
           asChild
           variant="outline"
           size="icon"
-          className="h-auto w-auto p-3"
+          className="h-16 w-16 bg-[#efd8f8] p-0"
         >
           <a
             href="https://t.me/dmitryshelomanov"
@@ -106,6 +108,7 @@ export function MainPage() {
             <img
               src="/icons/telegram-svgrepo-com.svg"
               alt="TG"
+              className="h-8 w-8"
               width={800}
               height={800}
             />
@@ -115,7 +118,7 @@ export function MainPage() {
           asChild
           variant="outline"
           size="icon"
-          className="h-auto w-auto p-3"
+          className="h-16 w-16 bg-[#86baf2] p-0"
         >
           <a
             href="https://github.com/dmitryshelomanov"
@@ -125,6 +128,7 @@ export function MainPage() {
             <img
               src="/icons/github-svgrepo-com.svg"
               alt="github"
+              className="h-8 w-8"
               width={800}
               height={800}
             />
@@ -132,17 +136,17 @@ export function MainPage() {
         </Button>
       </div>
 
-      <Button asChild variant="default" className="mt-1">
+      <Button asChild variant="default" className="mt-3 w-full justify-between px-6 text-base sm:w-fit">
         <a
           href="https://hh.ru/applicant/resumes/view?resume=69d46fb4ff03a1e96e0039ed1f3978684e6571"
           target="_blank"
           rel="noreferrer"
         >
-          Ссылка на PDF вариант
+          Мое резюме в PDF
         </a>
       </Button>
 
-      <Card className="mt-4 p-4">
+      <Card className="mt-4 bg-accent-secondary/50 p-4">
         <img
           alt="skills"
           src="/icons/skills.svg"
@@ -159,7 +163,7 @@ export function MainPage() {
 
         {experience.map((it) => (
           <li key={it.link}>
-            <Card interactive className="flex gap-4 items-start p-4">
+            <Card interactive className="flex items-start gap-4 bg-list-bg p-4">
               <img
                 src={`/logo/${it.logo}`}
                 alt={it.company}
@@ -184,7 +188,7 @@ export function MainPage() {
 
         {articles.map((it) => (
           <li key={it.link}>
-            <Card interactive className="flex gap-4 items-start p-4">
+            <Card interactive className="flex items-start gap-4 bg-accent-warm/45 p-4">
               <img
                 alt=""
                 width={it.width}
@@ -211,7 +215,7 @@ export function MainPage() {
 
         {projects.map((it) => (
           <li key={it.link}>
-            <Card interactive className="flex gap-4 items-start p-4">
+            <Card interactive className="flex items-start gap-4 bg-accent-secondary/35 p-4">
               <img src={it.logo} alt="" width={it.width} height={it.height} />
               <div className="flex flex-col gap-2">
                 <h3>

@@ -50,34 +50,23 @@
 
 @layer base {
   :root {
-    --color-body-bg: #eceff3;
-    --color-list-bg: #f8f9fb;
-    --color-list-bg-strong: #eef1f5;
-    --color-list-border: #18243d;
-    --color-list-font: #172238;
-    --color-accent: #245dff;
-    --color-link: #245dff;
-    --color-primary-foreground: #ffffff;
-    --color-page-grad-1: #ffffff;
-    --color-page-grad-2: #f4f5f8;
-    --color-page-grad-3: #e9edf2;
-    --color-brutal-shadow: 4px 4px 0 #18243d;
-    --radius: 1rem;
-  }
-
-  .dark {
-    --color-body-bg: #0f1727;
-    --color-list-bg: #172338;
-    --color-list-bg-strong: #20304d;
-    --color-list-border: #d8e5ff;
-    --color-list-font: #f1f6ff;
-    --color-accent: #8db2ff;
-    --color-link: #9ec0ff;
-    --color-primary-foreground: #0f1727;
-    --color-page-grad-1: #182746;
-    --color-page-grad-2: #1a2e52;
-    --color-page-grad-3: #17345e;
-    --color-brutal-shadow: 4px 4px 0 #d8e5ff;
+    --color-body-bg: #f8f8ef;
+    --color-list-bg: #fffdf5;
+    --color-list-bg-strong: #fff6be;
+    --color-list-border: #111111;
+    --color-list-font: #111111;
+    --color-accent: #d68bf5;
+    --color-accent-secondary: #5bd7d3;
+    --color-accent-success: #d8fb88;
+    --color-accent-warm: #fff2a3;
+    --color-accent-danger: #f188a4;
+    --color-link: #111111;
+    --color-primary-foreground: #111111;
+    --color-page-grad-1: #ffe8b8;
+    --color-page-grad-2: #c8f6ff;
+    --color-page-grad-3: #ffd1de;
+    --color-brutal-shadow: 0 6px 0 rgba(0, 0, 0, 0.85);
+    --radius: 1.75rem;
   }
 
   html,
@@ -89,19 +78,19 @@
     @apply w-full mx-auto p-4 lg:px-16 lg:py-8 font-body bg-transparent relative;
     background-image:
       radial-gradient(
-        circle at 10% 10%,
+        circle at 12% 18%,
         var(--color-page-grad-1),
-        transparent 45%
+        transparent 48%
       ),
       radial-gradient(
-        circle at 85% 18%,
+        circle at 88% 22%,
         var(--color-page-grad-2),
-        transparent 35%
+        transparent 42%
       ),
       radial-gradient(
-        circle at 78% 85%,
+        circle at 70% 86%,
         var(--color-page-grad-3),
-        transparent 42%
+        transparent 45%
       );
   }
 
@@ -140,7 +129,7 @@
   }
 
   a {
-    @apply text-link;
+    @apply text-link underline-offset-4;
   }
 
   ul {
@@ -154,6 +143,6 @@
 
 @layer components {
   .icon-adaptive {
-    @apply dark:brightness-0 dark:invert;
+    @apply transition-transform duration-150 hover:-translate-y-0.5;
   }
 }

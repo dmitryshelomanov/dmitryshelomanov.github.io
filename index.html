@@ -44,24 +44,6 @@
       rel="stylesheet"
     />
 
-    <script>
-      (function () {
-        var stored = localStorage.getItem("theme");
-        var prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
-        var theme =
-          stored === "light" || stored === "dark"
-            ? stored
-            : prefersDark
-              ? "dark"
-              : "light";
-        if (theme === "dark") {
-          document.documentElement.classList.add("dark");
-        }
-      })();
-    </script>
-
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
         m[i] =

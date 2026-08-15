@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -32,12 +31,17 @@ export default {
           DEFAULT: "var(--color-accent)",
           foreground: "var(--color-primary-foreground)",
         },
+        "accent-secondary": "var(--color-accent-secondary)",
+        "accent-success": "var(--color-accent-success)",
+        "accent-warm": "var(--color-accent-warm)",
+        "accent-danger": "var(--color-accent-danger)",
         card: {
           DEFAULT: "var(--color-list-bg)",
           foreground: "var(--color-list-font)",
         },
       },
       borderRadius: {
+        xl: "calc(var(--radius) - 8px)",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",

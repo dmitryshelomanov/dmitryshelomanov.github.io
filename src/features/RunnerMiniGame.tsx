@@ -83,10 +83,10 @@ const runnerFrames = [
 ] as const;
 
 const runnerPalette: SpritePalette = {
-  o: "#1e293b",
+  o: "#111111",
   h: "#f2c9a0",
-  s: "#2563eb",
-  p: "#0f172a",
+  s: "#d68bf5",
+  p: "#111111",
 };
 
 const obstacleOrder: ObstacleType[] = ["box", "folder", "laptop"];
@@ -125,8 +125,8 @@ const obstacleTemplates: Record<ObstacleType, ObstacleTemplate> = {
       "........",
     ],
     {
-      b: "#92400e",
-      t: "#facc15",
+      b: "#111111",
+      t: "#fff2a3",
     },
     4,
   ),
@@ -141,8 +141,8 @@ const obstacleTemplates: Record<ObstacleType, ObstacleTemplate> = {
       "..........",
     ],
     {
-      y: "#ca8a04",
-      f: "#fef08a",
+      y: "#111111",
+      f: "#5bd7d3",
     },
     4,
   ),
@@ -158,9 +158,9 @@ const obstacleTemplates: Record<ObstacleType, ObstacleTemplate> = {
       ".kkkkkkkk.",
     ],
     {
-      g: "#475569",
-      s: "#38bdf8",
-      k: "#1f2937",
+      g: "#111111",
+      s: "#d8fb88",
+      k: "#f188a4",
     },
     10,
   ),
@@ -467,7 +467,7 @@ export function RunnerMiniGame() {
   return (
     <section className="relative left-1/2 mt-10 w-screen -translate-x-1/2 px-0">
       <div className="mx-auto w-full max-w-[1200px]">
-      <Card className="w-full rounded-none border-x-0 border-y-2 bg-gradient-to-b from-list-bg-strong/50 to-card p-0">
+      <Card className="w-full rounded-none border-x-0 border-y-2 bg-gradient-to-b from-list-bg-strong/70 to-card p-0">
         <div className="px-5 pt-5 sm:px-6 sm:pt-6 lg:px-10">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div className="flex flex-col gap-1">
@@ -499,7 +499,7 @@ export function RunnerMiniGame() {
 
         <div
           ref={trackRef}
-          className="relative mt-5 h-56 w-full overflow-hidden bg-[linear-gradient(180deg,rgba(56,189,248,0.12)_0%,rgba(56,189,248,0.04)_38%,rgba(2,6,23,0.10)_100%)]"
+          className="relative mt-5 h-56 w-full overflow-hidden bg-[linear-gradient(180deg,rgba(214,139,245,0.20)_0%,rgba(91,215,211,0.08)_38%,rgba(241,136,164,0.13)_100%)]"
           onPointerDown={handleTrackPress}
           role="button"
           tabIndex={0}
@@ -511,15 +511,15 @@ export function RunnerMiniGame() {
             }
           }}
         >
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-[repeating-linear-gradient(90deg,transparent_0,transparent_48px,rgba(148,163,184,0.15)_48px,rgba(148,163,184,0.15)_52px)] opacity-40" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-[repeating-linear-gradient(90deg,transparent_0,transparent_48px,rgba(17,17,17,0.10)_48px,rgba(17,17,17,0.10)_52px)] opacity-30" />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[4px] bg-list-border/80" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-[4px] h-7 bg-[repeating-linear-gradient(90deg,rgba(148,163,184,0.14)_0,rgba(148,163,184,0.14)_24px,transparent_24px,transparent_36px)]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-[4px] h-7 bg-[repeating-linear-gradient(90deg,rgba(17,17,17,0.12)_0,rgba(17,17,17,0.12)_24px,transparent_24px,transparent_36px)]" />
 
           <PixelSprite
             rows={runnerFrames[game.runnerFrame]}
             palette={runnerPalette}
             pixelSize={RUNNER_PIXEL}
-            className="absolute drop-shadow-[0_0_8px_rgba(37,99,235,0.45)]"
+            className="absolute drop-shadow-[0_0_8px_rgba(214,139,245,0.45)]"
             style={{
               left: RUNNER_X,
               bottom: game.runnerY,
@@ -532,7 +532,7 @@ export function RunnerMiniGame() {
               rows={obstacleTemplates[it.type].rows}
               palette={obstacleTemplates[it.type].palette}
               pixelSize={OBSTACLE_PIXEL}
-              className="absolute drop-shadow-[0_0_6px_rgba(15,23,42,0.35)]"
+              className="absolute drop-shadow-[0_0_6px_rgba(17,17,17,0.35)]"
               style={{
                 left: it.x,
                 bottom: 0,

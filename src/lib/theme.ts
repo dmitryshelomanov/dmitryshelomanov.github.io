@@ -1,16 +1,14 @@
-export type Theme = "light" | "dark";
+export type Theme = "light";
 
 export const THEME_STORAGE_KEY = "theme";
 
 export function getStoredTheme(): Theme | null {
   const stored = localStorage.getItem(THEME_STORAGE_KEY);
-  return stored === "light" || stored === "dark" ? stored : null;
+  return stored === "light" ? stored : null;
 }
 
 export function getSystemTheme(): Theme {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+  return "light";
 }
 
 export function getInitialTheme(): Theme {
@@ -18,5 +16,6 @@ export function getInitialTheme(): Theme {
 }
 
 export function applyTheme(theme: Theme) {
-  document.documentElement.classList.toggle("dark", theme === "dark");
+  document.documentElement.classList.remove("dark");
+  document.documentElement.dataset.theme = theme;
 }
