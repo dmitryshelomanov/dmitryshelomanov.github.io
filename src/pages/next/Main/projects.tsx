@@ -1,5 +1,13 @@
 export const projects = [
   {
+    logo: "/logo/moneyFlowLogo.svg",
+    width: 32,
+    height: 32,
+    title: "MoneyFlow",
+    description: "Личный трекер трат: Telegram-бот, AI-парсинг чеков и web-дашборд",
+    link: "/p/moneyflow",
+  },
+  {
     logo: "/logo/irisLogo.png",
     width: 1024,
     height: 1024,

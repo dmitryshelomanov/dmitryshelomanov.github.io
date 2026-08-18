@@ -46,9 +46,6 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      boxShadow: {
-        brutal: "var(--color-brutal-shadow)",
-      },
       fontFamily: {
         heading: ["Tungsten-Bold", "Oswald", "Roboto", "sans-serif"],
         body: ["DINNextW05-Medium", "Noto Sans", "Roboto", "sans-serif"],

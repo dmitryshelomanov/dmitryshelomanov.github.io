@@ -9,6 +9,24 @@ export const projects: Record<
     height: number;
   }
 > = {
+  moneyflow: {
+    title: "MoneyFlow",
+    link: "https://github.com/dmitryshelomanov/moneyflow",
+    width: 1280,
+    height: 2720,
+    text: (
+      <>
+        Личный трекер трат: Telegram (текст, фото чека или скрин истории банка)
+        → RouterAI → SQLite → glass UI. Стек: Hono, Drizzle, grammY, React,
+        Vite, Recharts. Self-host через Docker.
+      </>
+    ),
+    images: [
+      "/moneyflow-screens/dashboard.png",
+      "/moneyflow-screens/transactions.png",
+      "/moneyflow-screens/categories.png",
+    ],
+  },
   iris: {
     title: "Iris",
     link: "https://dmitryshelomanov.github.io/iris/",
