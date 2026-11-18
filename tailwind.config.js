@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -41,14 +42,41 @@ export default {
         },
       },
       borderRadius: {
-        xl: "calc(var(--radius) - 8px)",
+        xl: "calc(var(--radius) + 4px)",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        pop: "var(--color-pop-shadow)",
+        "pop-hover": "var(--color-pop-shadow-hover)",
+        card: "var(--color-card-shadow)",
+      },
       fontFamily: {
-        heading: ["Tungsten-Bold", "Oswald", "Roboto", "sans-serif"],
-        body: ["DINNextW05-Medium", "Noto Sans", "Roboto", "sans-serif"],
+        heading: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "SF Pro Display",
+          "SF Pro Text",
+          "system-ui",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+        body: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "SF Pro Text",
+          "SF Pro Display",
+          "system-ui",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
       },
     },
   },

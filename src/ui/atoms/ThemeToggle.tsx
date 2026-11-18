@@ -13,7 +13,7 @@ export function ThemeToggle() {
       size="icon"
       onClick={toggleTheme}
       aria-label={isDark ? "Включить светлую тему" : "Включить тёмную тему"}
-      className="fixed right-4 top-4 z-50 rounded-full"
+      className="fixed right-4 top-4 z-50"
     >
       {isDark ? (
         <Sun className="h-5 w-5" aria-hidden />

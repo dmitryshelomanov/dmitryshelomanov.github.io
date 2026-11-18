@@ -57,7 +57,7 @@ export function MainPage() {
           asChild
           variant="outline"
           size="icon"
-          className="h-16 w-16 bg-accent-danger p-0"
+          className="h-16 w-16 bg-accent-danger/35 p-0"
         >
           <a
             href="https://vk.com/dmitryshelomanov"
@@ -77,7 +77,7 @@ export function MainPage() {
           asChild
           variant="outline"
           size="icon"
-          className="h-16 w-16 bg-accent-success p-0"
+          className="h-16 w-16 bg-accent-success/40 p-0"
         >
           <a
             href="mailto:dmitryshelomanov@mail.ru"
@@ -97,7 +97,7 @@ export function MainPage() {
           asChild
           variant="outline"
           size="icon"
-          className="h-16 w-16 bg-[#efd8f8] p-0"
+          className="h-16 w-16 bg-accent p-0"
         >
           <a
             href="https://t.me/dmitryshelomanov"
@@ -117,7 +117,7 @@ export function MainPage() {
           asChild
           variant="outline"
           size="icon"
-          className="h-16 w-16 bg-[#86baf2] p-0"
+          className="h-16 w-16 bg-accent-secondary/55 p-0"
         >
           <a
             href="https://github.com/dmitryshelomanov"
